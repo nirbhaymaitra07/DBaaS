@@ -1,21 +1,31 @@
 import React from 'react'
 import "./customlayoutcard.css"
 import testlayout from "./images/testlayout.svg"
+import { useLocation,useNavigate, } from 'react-router-dom';
 const CustomLayoutcard = ({item}) => {
+  console.log(item);
+  let Navigate=useNavigate()
+  let location=useLocation()
+  const handleClick = (imgSrc) => {
+    Navigate('/CastEnvironment', { state: { imgSrc } });
+  };
   return (
     <div className='custom-layout'>
       <div className="layout-section">
-        <img src={testlayout} alt="" />
+        <img src={item?.img} alt="" onClick={() => handleClick(item?.img)} />
       </div>
       <div className="layout-details">
-        <h5 className="layout-name">{item?.Layout_Name}</h5>
+        <h5 className="layout-name">{item?.Area}</h5>
         <div className="created-container">
-            <span>Created by {item?.created_by}</span>
-            <span>Created on: 23/01/2023</span>
+            <span>Created by {item?.CreatedBy}</span>
+            <span>Created on:{item?.createon}</span>
         </div>
         <div className="lastused-container">
-            <span>Last used: {item?.last_used}</span>
-            <span>{item?.devices} Devices</span>
+            <span>Last used: {item?.LastUsed}</span>
+            <div>
+              {location.pathname==="/cast" && <img src={item?.HotSpot} alt='hotspot'/>}
+            <span>{item?.devices} 5 Devices</span>
+            </div>
         </div>
       </div>
     </div>

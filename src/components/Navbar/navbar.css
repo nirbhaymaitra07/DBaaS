@@ -43,5 +43,6 @@
     height: 37%;
     font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
     font-weight: 400;
+    color: #fff;
 }
 
