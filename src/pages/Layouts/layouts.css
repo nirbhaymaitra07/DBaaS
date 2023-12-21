@@ -1,0 +1,94 @@
+.layouts-container {
+  width: 100%;
+  height: 100%;
+}
+.layouts-container .top-section {
+  width: 100%;
+  height: 13.37%;
+  position: relative;
+  border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.layouts-container .top-section h4 {
+  position: absolute;
+  top: 59.81%;
+  left: 4.4%;
+  font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
+  font-weight: 400;
+  color: #2c2c2c;
+}
+.layouts-container .top-section .image-container {
+  width: 5.55%;
+  height: 18.5%;
+  position: absolute;
+  top: 21.5%;
+  right: 5%;
+  
+}
+.layouts-container .top-section .image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.layouts-container .bottom-section{
+  width: 100%;
+  height: 76.5%;
+}
+.layouts-container .bottom-section .tabs {
+  width: 100%;
+  height: 7.01%;
+  display: flex;
+}
+
+.layouts-container .bottom-section .tabs .templates{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layouts-container .bottom-section .tabs .custom{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layouts-container .bottom-section .tabs span {
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  color: #838383;
+}
+
+#activetab{
+  background: rgba(19, 2, 124, 0.05);
+  position: relative;
+}
+#activetab span{
+  color: #2C2C2C;
+}
+
+#activetab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%; 
+  background-color: #13027C;
+  box-sizing: border-box;
+}
+
+.layouts-container .bottom-section .custom-card-container{
+  width: 91.12%;
+  height: 90%;
+  padding: 2.8% 4.44%;
+  overflow: auto;
+}
+.layouts-container .bottom-section .templates-card-container{
+  width: 91.12%;
+  height: 90%;
+  padding: 2.8% 4.44%;
+  overflow: auto;
+}

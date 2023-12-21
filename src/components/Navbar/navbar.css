@@ -1,0 +1,47 @@
+.navbar-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #13027C;
+}
+.navbar-container .icon-container{
+    width: 17.77%;
+    height: 62.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.navbar-container .icon-container .icon{
+    width: 100%;
+   height: 64%;
+   border-radius: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 16px;
+   
+   
+}
+.selected{
+    background: rgb(255, 255, 255,0.1);
+
+}
+.active > path{
+    fill: aliceblue;
+}
+.navbar-container .icon-container .icon img{
+    width:25.16%;
+    fill: aliceblue;
+}
+.navbar-container .icon-container span{
+    height: 37%;
+    font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
+    font-weight: 400;
+}
+
