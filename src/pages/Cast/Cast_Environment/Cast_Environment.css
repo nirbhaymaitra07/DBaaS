@@ -50,23 +50,32 @@
     position: relative;
 }
 
-.Cast_Environment_parent_Rotation_Area img{
+.Cast_Environment_parent_Rotation_Sub_heading{
     width: 6.6%;
     top: 2.71%;
     position:absolute;
 }
 
-.Rotate{
+#Rotate{
     left: 4.44%;
 }
 
-.RotateHorizontal{
+#RotateHorizontal{
     left: 17.77%;
 }
 
-.View{
+#View{
     left: 88.88%;
 }
+
+.Cast_Environment_parent_Rotation_Area_Img{
+    width: 81.11%;
+    height: 15.95%;
+    position:absolute;
+    top:44.125%;
+    left: 9.4%;
+}
+
 .Cast_Rotation_img{
     width: 100%;
     height: 3%;
@@ -119,13 +128,11 @@ color: #555555;
  
 }
 
-.Cast_Environment_parent_Rotation_Area_Img{
-    width: 81.11%;
-    position:absolute;
-    top:44.12%;
-}
+/* Add styles for the zoomed image */
+#zoomed {
+    transform: scale(1.5); /* Increase the size of the image */
+    transition: transform 0.3s ease; /* Add a smooth transition */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
 
-.Cast_Environment_parent_Rotation_Area_Div{
-    width: 100%;
-    position: relative
-}

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom';
+import React,{useState} from 'react'
+import { useLocation,useNavigate } from 'react-router-dom';
 import ArrowLeft from "./images/Arrow Left.svg"
 import AddBtn from "./images/Add.svg"
 import Coding from "./images/Coding.svg"
@@ -13,7 +13,21 @@ import ArrowRight from "./images/Arrow Right.svg"
 import "./Cast_Environment.css"
 const Cast_Environment = () => {
     const location = useLocation();
+    const navigate=useNavigate()
     const imgSrc = location.state?.imgSrc;
+    const [zoomed, setZoomed] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const handleClick = () => {
+    setClickCount(prevCount => prevCount + 1);
+
+    if (clickCount % 2 === 0) {
+      // First click: Zoom in
+      setZoomed(true);
+    } else {
+      // Second click: Navigate to another route
+      navigate('/cast');
+    }
+  };
   return (
     <div className='Cast_Environment_parent'>
         <div className='Cast_Environment_parent_Header'>
@@ -24,12 +38,15 @@ const Cast_Environment = () => {
             <p className='Cast_Environment_parent_Header_contnet'>Daily - Common area</p>
         </div>
         <div className='Cast_Environment_parent_Rotation_Area'>
-           <img src={Rotate} alt="Rotate"  className='Rotate'/>
-           <img src={RotateHorizontal} alt="RotateHorizontal"  className='RotateHorizontal'/>
-           <img src={View} alt="View" className='View'/>
-           <div className='Cast_Environment_parent_Rotation_Area_Div'>
-            <img src={imgSrc} alt="imgSrc"  className='Cast_Environment_parent_Rotation_Area_Img'/>
-           </div>
+           <img src={Rotate} alt="Rotate"  id='Rotate' className='Cast_Environment_parent_Rotation_Sub_heading'/>
+           <img src={RotateHorizontal} alt="RotateHorizontal"  id='RotateHorizontal' className='Cast_Environment_parent_Rotation_Sub_heading'/>
+           <img src={View} alt="View" id='View'className='Cast_Environment_parent_Rotation_Sub_heading'/>
+            <img src={imgSrc} 
+            alt="imgSrc"  
+            className='Cast_Environment_parent_Rotation_Area_Img' 
+            onClick={handleClick}
+            id={zoomed ? 'zoomed' : ''}
+            />
         </div>
         <div className='Cast_Rotation_img'>
             <img src={RotationGraph} alt="RotationGraph"  className='RotationGraph'/>
@@ -37,7 +54,7 @@ const Cast_Environment = () => {
         <div className='Discard_CastNow_Btn'>
            <div>
             <img src={Remove} alt="Remove" className=''/>
-            <p className='Discard'>Discard</p>
+            <p className='Discard' onClick={()=>navigate("/cast")}>Discard</p>
            </div>
            <div style={{backgroundColor:"#13027C"}}>
             <p className='CastNow'>Cast now </p>
