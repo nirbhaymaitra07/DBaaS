@@ -6,9 +6,11 @@ function App() {
 
   return (
     <>
+    {/* Browser Routers */}
     <BrowserRouter>
       <Structure/>
     </BrowserRouter>
+    {/* Browser Routers */}
     </>
   )
 }
