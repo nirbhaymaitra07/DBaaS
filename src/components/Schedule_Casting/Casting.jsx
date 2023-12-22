@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import arrow from "./images/Arrow-left.png";
+import arrow from "./images/ArrowLeft1.svg";
 import "./casting.css";
 function Casting() {
     const [selectedFrequency, setSelectedFrequency] = useState("");
