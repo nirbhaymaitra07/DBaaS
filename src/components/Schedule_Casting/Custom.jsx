@@ -1,5 +1,5 @@
-import React from "react";
-import "./ScheduleCasting.css";
+import React, { useState } from 'react'
+import './custom.css'
 import Back from "./images/Back.svg";
 import ArrowLeft from "./images/Arrow-Left.svg";
 import ArrowRight from "./images/Arrow-Right.svg";
@@ -12,15 +12,25 @@ import Remove from "./images/Remove.svg";
 import CalendarBody from "./images/Calendar-body.svg";
 import LineBody from "./images/Line-body.svg";
 import Add from "./images/Add.svg"
-
-const ScheduleCasting = () => {
+function Custom() {
+    const [selectedOption, setSelectedOption] = useState('');
+    const options = [
+        { value: 'option1', label: 'Friday' },
+        { value: 'option2', label: 'Saturday' },
+        { value: 'option3', label: 'Sunday' },
+        // Add more options as needed
+      ];
+      const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value); // Update the selected option in state
+      };
   return (
-    <div className="main-container">
-      <div className="casting-header">
-        <div className="back-image">
+    
+       <div className="custom-container">
+      <div className="casting-head">
+        <div className="back-img">
           <img src={Back} />
         </div>
-        <div className="heading">Schedule Casting</div>
+        <div className="header">Schedule Casting</div>
       </div>
 
       <div className="date-time-div">
@@ -58,7 +68,7 @@ const ScheduleCasting = () => {
       <div className="casting-body">
 
         <div className="casting-upper">
-            <p className="daily-para">Daily</p>
+            <p className="daily-para">Custom</p>
             <p className="change-para">Change</p>
         </div>
 
@@ -76,8 +86,23 @@ const ScheduleCasting = () => {
             </div>
             <img className="line-body" src={LineBody} />
         </div>
-        
+       
         <div className="time-div">
+        <div className='day-div'>
+            <p className='day'>Day</p>
+            <div>
+            <select className='custom-dropdown' value={selectedOption} onChange={handleOptionChange}>
+        <option className='val' value="Thursday">Thursday</option>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      {/* {selectedOption && <p>Selected option: {selectedOption}</p>} Show the selected option */}
+            </div>
+           
+            </div>
         <p className="time-heading">Start Time</p>
             <div className="time-subdiv">
             <input className="time-input" type="text" placeholder="12"/>
@@ -92,10 +117,10 @@ const ScheduleCasting = () => {
             <input className="time-input" type="text" placeholder="AM"/>
             </div>
 
-            <div className="lower-body-text-div">
+            {/* <div className="lower-body-text-div">
             <img className="lower-body-img" src={Add} />
             <p className="lower-body-text">Add another time slot</p>
-            </div>
+            </div> */}
             
         </div>
 
@@ -106,7 +131,7 @@ const ScheduleCasting = () => {
         <button className="schedule-btn">SCHEDULE</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ScheduleCasting;
+export default Custom

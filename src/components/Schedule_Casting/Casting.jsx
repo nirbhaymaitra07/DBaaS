@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import arrow from "./images/ArrowLeft1.svg";
 import "./casting.css";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import ScheduleCasting from "./ScheduleCasting";
 function Casting() {
     const [selectedFrequency, setSelectedFrequency] = useState("");
 
@@ -22,6 +24,7 @@ function Casting() {
             checked={selectedFrequency === "daily"}
             onChange={handleFrequencyChange} />
             <label htmlFor="daily">Daily</label>
+            {/* <Link to="/ScheduleCasting">Daily</Link> */}
           </div>
           <div className="radiosec">
             <input
