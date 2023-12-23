@@ -7,7 +7,9 @@ import junemenu from "./images/junemenu.svg"
 import PersonalHotspot from "./images/PersonalHotspot.svg"
 import AddBtn from "./images/Add.svg" 
 import "./cast.css"
+import { Outlet,useLocation } from 'react-router-dom'
 const Cast = () => {
+  let location=useLocation()
   const DataConfiguration = [
     {
       img: commonarea,
@@ -36,16 +38,19 @@ const Cast = () => {
   ];
 // console.log(DataConfiguration);
   return (
-    <div className='Cast_App_Configuration'>
+    <>
+       {location.pathname==="/cast"?<div className='Cast_App_Configuration'>
         <div className='Cast_App_Configuration_Header'>
            <img className='Cast_App_Configuration_Header_Plus_btn' src={AddBtn} alt='addbutton'/>
            <div className='Cast_App_Configuration_Header_Name'>App Configurations</div>  
          </div>
          <div className='Cast_App_Configuration_Cards_Container'>
-         {DataConfiguration.map((item)=><CustomLayoutcard item={item}/>) }
+           {DataConfiguration.map((item)=><CustomLayoutcard item={item}/>) }
          </div>
-     
-    </div>
+        </div>:
+          <Outlet/>
+        }
+    </>
   )
 }
 

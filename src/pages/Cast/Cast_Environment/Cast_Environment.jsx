@@ -25,7 +25,7 @@ const Cast_Environment = () => {
       setZoomed(true);
     } else {
       // Second click: Navigate to another route
-      navigate('/cast');
+      navigate('/cast/Apps');
     }
   };
   return (
@@ -40,7 +40,11 @@ const Cast_Environment = () => {
         <div className='Cast_Environment_parent_Rotation_Area'>
            <img src={Rotate} alt="Rotate"  id='Rotate' className='Cast_Environment_parent_Rotation_Sub_heading'/>
            <img src={RotateHorizontal} alt="RotateHorizontal"  id='RotateHorizontal' className='Cast_Environment_parent_Rotation_Sub_heading'/>
-           <img src={View} alt="View" id='View'className='Cast_Environment_parent_Rotation_Sub_heading'/>
+           <img src={View} alt="View" 
+           id='View'
+           className='Cast_Environment_parent_Rotation_Sub_heading'
+           onClick={()=>navigate("/cast/preview",{ state: { imgSrc } })}
+           />
             <img src={imgSrc} 
             alt="imgSrc"  
             className='Cast_Environment_parent_Rotation_Area_Img' 

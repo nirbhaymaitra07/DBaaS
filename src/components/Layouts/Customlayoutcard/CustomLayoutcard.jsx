@@ -7,7 +7,7 @@ const CustomLayoutcard = ({item}) => {
   let Navigate=useNavigate()
   let location=useLocation()
   const handleClick = (imgSrc) => {
-    Navigate('/CastEnvironment', { state: { imgSrc } });
+    Navigate('/cast/castenvironment', { state: { imgSrc } });
   };
   return (
     <div className='custom-layout'>

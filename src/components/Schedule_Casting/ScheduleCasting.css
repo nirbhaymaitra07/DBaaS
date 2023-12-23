@@ -1,0 +1,116 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+}
+
+.casting-header{
+    height: 13.37%;
+    position: relative;
+}
+
+.back-image {
+  color: black;
+  position: absolute;
+  top: 18.67%;
+  left: 4.44%
+}
+
+.heading {
+    color: black;
+    position: absolute;
+    top: 60%;
+    left: 4.44%
+  }
+
+.date-time-div {
+  height: 12.62%;
+  background-color: rgb(244, 239, 239);
+}
+
+.date-time-top-subdiv{
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    width: 100%;
+}
+
+.date-time-topleft-subdiv{
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    width: 40%;
+    align-items: center;
+}
+
+.arrow-left{
+    /* top: 15.84%; */
+    height: 50%;
+}
+
+.arrow-right{
+    height: 50%;
+}
+
+.date-heading{
+    font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
+    font-weight: 500;
+    color: #4A5A70
+}
+
+.date-time-topright-subdiv{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 40%;
+    align-items: center;
+}
+
+.dark-calendar-image{
+    height: 50%;
+}
+
+.date-time-bottom-subdiv{
+    height: 50%;
+    width: 100%;
+}
+
+.timeline-number{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 40%;
+}
+
+.timeline-calendar-image{
+    width: 100%;
+}
+span{
+    color: #4A5A70;
+    font-size: clamp(0.13875rem, -0.0001rem + 2.2222vw, 13.88875rem);
+}
+
+.casting-body{
+    height: 64%;
+    width: 100%;
+}
+
+.casting-footer{
+    height: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.discard-btn{
+    width: 50%;
+    border-radius: 0%;
+    background-color: #fff;
+    color: #555;
+    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+}
+
+.schedule-btn{
+    width: 50%;
+    border-radius: 0%;
+    background-color: #13027C;
+    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+}
