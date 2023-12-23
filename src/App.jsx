@@ -8,13 +8,11 @@ function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Structure/>
-    </BrowserRouter> */}
+    </BrowserRouter>
    
-    {/* <ScheduleCasting />
-    <Custom/> */}
-    <Newlayout/>
+    <ScheduleCasting />
     </>
     
   )

@@ -1,0 +1,66 @@
+.Apps_Parent{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.Apps_Close_Btn{
+    position: absolute;
+    width: 4.444%;
+    top:4.25% ;
+    left:4.444% ;
+}
+
+.Apps_Header_Content{
+    position: absolute;
+    width: 10%;
+    top:4% ;
+    left:13.88% ;
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+}
+
+.Apps_Screens_Header1{
+    position:absolute;
+    width:88.77% ;
+    height: 6.25%;
+    top:7.5% ;
+    border-radius: 1.13%;
+    /* border: 2px solid; */
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Apps_Screens_Header2{
+    position:absolute;
+    width:88.77% ;
+    height: 6.25%;
+    top:13.75% ;
+    border-radius: 1.13%;
+    /* border: 2px solid; */
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Apps_Screens_Header3{
+    position:absolute;
+    width:88.77% ;
+    height: 6.25%;
+    top:22% ;
+    border-radius: 1.13%;
+    /* border: 2px solid; */
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Apps_Screens_Header_Content{
+    font-size: clamp(0.28375rem, -0.0003rem + 4.5455vw, 28.40875rem);
+    /* font-family: Poppins; */
+    /* font-size: 16px; */
+    font-weight: 400;
+    line-height: 24px;
+    color: #2C2C2C;
+}
