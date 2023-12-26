@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ScheduleCasting.css";
 import Back from "./images/Back.svg";
 import ArrowLeft from "./images/Arrow-Left.svg";
@@ -11,9 +11,12 @@ import TimeLine from "./images/TimeLine.svg";
 import Remove from "./images/Remove.svg";
 import CalendarBody from "./images/Calendar-body.svg";
 import LineBody from "./images/Line-body.svg";
-import Add from "./images/Add.svg"
+import Add from "./images/Add.svg";
+import Frame from "./images/Frame.svg"
 
 const ScheduleCasting = () => {
+  const [addTimeSlot, setAddTimeSlot] = useState(false);
+
   return (
     <div className="main-container">
       <div className="casting-header">
@@ -25,7 +28,6 @@ const ScheduleCasting = () => {
 
       <div className="date-time-div">
         <div className="date-time-top-subdiv">
-
           <div className="date-time-topleft-subdiv">
             <img src={ArrowLeft} className="arrow-left" />
             <h5 className="date-heading">1 June</h5>
@@ -37,74 +39,129 @@ const ScheduleCasting = () => {
             <img src={Line} className="line-calendar-image" />
             <img src={LightCalendar} className="light-calendar-image" />
             <img src={Line} className="line-calendar-image" />
-            <img src={DetailedLightCalendar} className="detailed-calendar-image" />
-
+            <img
+              src={DetailedLightCalendar}
+              className="detailed-calendar-image"
+            />
           </div>
         </div>
 
         <div className="date-time-bottom-subdiv">
-            <div className="timeline-number">
+          <div className="timeline-number">
             <span>02:00</span>
             <span>04:00</span>
             <span>10:00</span>
             <span>14:00</span>
             <span>18:00</span>
             <span>22:00</span>
-            </div>
-            <img src={TimeLine} className="timeline-calendar-image"/>
+          </div>
+          <img src={TimeLine} className="timeline-calendar-image" />
         </div>
       </div>
 
       <div className="casting-body">
-
         <div className="casting-upper">
-            <p className="daily-para">Daily</p>
-            <p className="change-para">Change</p>
+          <p className="daily-para">Daily</p>
+          <p className="change-para">Change</p>
         </div>
 
         <div className="date-div">
-            <p className="date-heading">Start Date</p>
-            <div className="date-subdiv">
-            <input className="date-input" type="text" placeholder="01/06/2023"/>
-            <img  className="date-input-image" src={CalendarBody} />
-            </div>
+          <p className="date-heading">Start Date</p>
+          <div className="date-subdiv">
+            <input
+              className="date-input"
+              type="text"
+              placeholder="01/06/2023"
+            />
+            <img className="date-input-image" src={CalendarBody} />
+          </div>
 
-            <p className="date-heading">End Date (Optional)</p>
-            <div className="date-subdiv">
-            <input className="date-input" type="text" placeholder="01/06/2023"/>
-            <img  className="date-input-image" src={CalendarBody} />
-            </div>
-            <img className="line-body" src={LineBody} />
+          <p className="date-heading">End Date (Optional)</p>
+          <div className="date-subdiv">
+            <input
+              className="date-input"
+              type="text"
+              placeholder="01/06/2023"
+            />
+            <img className="date-input-image" src={CalendarBody} />
+          </div>
+          <img className="line-body" src={LineBody} />
         </div>
-        
+
         <div className="time-div">
-        <p className="time-heading">Start Time</p>
-            <div className="time-subdiv">
-            <input className="time-input" type="text" placeholder="12"/>
-            <input className="time-input" type="text" placeholder="00"/>
-            <input className="time-input" type="text" placeholder="AM"/>
+          <p className="time-heading">Start Time</p>
+          <div className="time-subdiv">
+            <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="12" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
             </div>
-
-            <p className="time-heading">End Time (Optional)</p>
-            <div className="time-subdiv">
-            <input className="time-input" type="text" placeholder="12"/>
-            <input className="time-input" type="text" placeholder="00"/>
-            <input className="time-input" type="text" placeholder="AM"/>
+            <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="00" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
             </div>
+            <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="AM" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
+            </div>
+          </div>
 
-            <div className="lower-body-text-div">
+          <p className="time-heading">End Time (Optional)</p>
+          <div className="time-subdiv">
+          <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="12" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
+            </div>
+            <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="00" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
+            </div>
+            <div className="time-subdiv-info">
+                <input className="time-subdiv-info-input" type="text" placeholder="AM" />
+                <img  className="time-subdiv-info-image" src={Frame} alt="frame"/>
+            </div>
+          </div>
+
+          <div className="lower-body-text-div"  onClick={() => setAddTimeSlot(true)}>
             <img className="lower-body-img" src={Add} />
             <p className="lower-body-text">Add another time slot</p>
-            </div>
-            
+          </div>
         </div>
-
       </div>
-      
+
       <div className="casting-footer">
+        <div className="casting-footer-discard">
+        <img className ="casting-footer-discard-img" src={Remove} />
         <button className="discard-btn">DISCARD</button>
+        </div>
         <button className="schedule-btn">SCHEDULE</button>
       </div>
+
+      <div className="wrap-up-background-image" style={
+          addTimeSlot
+            ? { transform: "translateY(0%)" }
+            : { transform: "translateY(102%)" }
+        }>
+      <div
+        className="time-slot-popup"
+        style={
+          addTimeSlot
+            ? { transform: "translateY(0%)" }
+            : { transform: "translateY(102%)" }
+        }
+       
+      >
+        <div className="time-slot-popup-options">
+          <p className="time-slot-popup-options-para">Weekdays(Mon-Fri)</p>
+        </div>
+        <div className="time-slot-popup-options">
+          <p className="time-slot-popup-options-para">Weekends(Sat-Sun)</p>
+        </div>
+        <div className="time-slot-popup-options">
+          <p className="time-slot-popup-options-para">Custom</p>
+        </div>
+      </div>
+      </div>
+      
     </div>
   );
 };
