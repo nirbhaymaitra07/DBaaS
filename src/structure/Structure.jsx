@@ -11,8 +11,14 @@ const Structure = () => {
   let location = useLocation();
   return (
     <>
-      <Routes>
+       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/layouts" element={<Layouts />} />
+        <Route path="/cast" element={<Cast />} >
+             <Route path="/cast/castenvironment" element={<Cast_Environment/>}/>
+             <Route path="/cast/preview" element={<Preview/>}/>
+             <Route path="/cast/Apps" element={<Apps/>}/>
+          </Route>
         <Route path="/layouts" element={<Layouts />}>
           <Route path="/layouts/newlayout" element={<Newlayout />} />
           <Route path="/layouts/untitled" element={<Untitled />} />
