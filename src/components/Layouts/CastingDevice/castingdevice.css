@@ -1,0 +1,26 @@
+.casting-device-container{
+    width: 100%;
+    height: 10.88%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 7.31%;
+    padding-right: 2.43%;
+}
+.casting-device-container h4{
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2C2C2C;
+}
+.casting-device-container span{
+    font-size: clamp(0.173125rem, -0.0005rem + 2.7778vw, 17.360625rem);
+    font-weight: 400;
+    color: #7DB21C;
+}
+.casting-device-container .not-availabel{
+    color: #F55;
+}
+.casting-device-container .not-active{
+    color: #838383;
+}

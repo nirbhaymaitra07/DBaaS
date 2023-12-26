@@ -10,9 +10,12 @@ function App() {
     <>
     <BrowserRouter>
       <Structure/>
+
     </BrowserRouter>
    
     {/* <ScheduleCasting /> */}
+
+    </BrowserRouter>    
     </>
     
   )
