@@ -1,0 +1,38 @@
+.chooselayout-container {
+  width: 100%;
+  height: 100%;
+}
+.chooselayout-container .top-section {
+  width: 100%;
+  height: 13.37%;
+  position: relative;
+  padding: 0% 5%;
+  padding-top: 5.69%;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4%;
+}
+.chooselayout-container .top-section .top-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chooselayout-container .top-section .top-icons > img {
+  width: 6.5%;
+}
+
+.chooselayout-container .top-section h4 {
+  position: absolute;
+  left: 4.44%;
+  bottom: 14.95%;
+  color: #2c2c2c;
+  font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
+  font-weight: 400;
+}
+.chooselayout-container .layouts-container {
+  width: 100%;
+  height: 86.5%;
+  padding: 0 4.4%;
+  overflow-y: auto;
+}

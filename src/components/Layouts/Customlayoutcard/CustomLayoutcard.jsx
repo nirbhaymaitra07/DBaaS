@@ -22,7 +22,7 @@ const CustomLayoutcard = ({item}) => {
         </div>
         <div className="lastused-container">
             <span>Last used: {item?.LastUsed}</span>
-            <div>
+            <div className='hotspotcontainer'>
               {location.pathname==="/cast" && <img src={item?.HotSpot} alt='hotspot'/>}
             <span>{item?.devices} 5 Devices</span>
             </div>

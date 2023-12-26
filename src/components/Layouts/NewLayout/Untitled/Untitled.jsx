@@ -275,6 +275,7 @@ const Untitled = () => {
             ? { transform: "translateY(0%)" }
             : { transform: "translateY(102%)" }
         }
+        onClick={()=>setshowwifidevices(false)}
       >
         <div
           className="wifi-devices-conatiner"
@@ -283,6 +284,7 @@ const Untitled = () => {
               ? { transform: "translateY(0%)" }
               : { transform: "translateY(102%)" }
           }
+          
         >
           <div className="top-wifi-title">
             <span>Select a WIFI network:</span>
