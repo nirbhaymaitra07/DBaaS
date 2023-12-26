@@ -1,0 +1,167 @@
+.newdisplay-container{
+    width: 100%;
+    height: 39.75%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0% 4.44%;
+    padding-top: 5%;
+    border-radius: 16px 16px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in;
+}
+.newdisplay-container .newdisplay-top-section{
+   width: 100%;
+   height: 10%;
+   display: flex;
+   align-items: center;
+   margin-bottom: 5%;
+}
+.newdisplay-container .newdisplay-top-section span{
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #2C2C2C;
+    font-weight: 500;
+}
+.newdisplay-container .size-container{
+    width: 100%;
+    height: 17.92%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 5.03%;
+    
+}
+.newdisplay-container .size-container label{
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #4A5A70;
+    margin-bottom: 1%;
+
+}
+.newdisplay-container .size-container input{
+    width: 100%;
+    height: 56.14%;
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #2C2C2C;
+    font-weight: 400;
+    border-radius: 8px;
+    background: rgb(19, 2, 124,0.1);
+    padding: 0px 5.03%;
+    outline: none;
+    border: none;
+    color: black;
+
+}
+.newdisplay-container .size-container .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 57.5%;
+}
+.newdisplay-container .device-placement{
+    width: 100%;
+    height: 32.38%;
+    margin-bottom: 5.03%;
+}
+.newdisplay-container .device-placement label{
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #4A5A70;
+    margin-bottom: 1%;
+}
+.newdisplay-container .device-placement .input-container{
+    width: 100%;
+    height: 31.06%;
+    position: relative;
+    margin-bottom: 5.03%;
+}
+.newdisplay-container .device-placement .input-container input{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #2C2C2C;
+    font-weight: 400;
+    background: rgb(19, 2, 124,0.1);
+    padding: 0px 11.03%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+
+.newdisplay-container .device-placement .input-container .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 25.5%;
+}
+
+.newdisplay-container .device-placement .input-container > img{
+    height: 50%;
+    position: absolute;
+    left: 4.44%;
+    top: 25%;
+}
+
+.newdisplay-container .device-placement .angle{
+    width: 27%;
+    height: 30.74%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5.03%;
+}
+.newdisplay-container .device-placement .angle label{
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #4A5A70;
+    margin-right: 5%;
+}
+.newdisplay-container .device-placement .angle input{
+    width: 100%;
+    height: 100%;
+    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+    color: #2C2C2C;
+    font-weight: 400;
+    padding-left: 8%;
+    background: rgb(19, 2, 124,0.1);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+.newdisplay-container .device-placement .angle img{
+    height: 18%;
+    position: absolute;
+    right: -10%;
+    top: -3%;
+}
+.newdisplay-container .newdisplay-actions{
+   width: 100%;
+   height: 21.86%;
+   display: flex;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   box-sizing: border-box;
+}
+.newdisplay-container .newdisplay-actions button{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 400;
+   font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+   background: #FFF;
+   border-radius: 0px;
+}
+.newdisplay-container .newdisplay-actions .cancel{
+    color: #838383;
+}
+.newdisplay-container .newdisplay-actions .save{
+    color: #13027C;
+}

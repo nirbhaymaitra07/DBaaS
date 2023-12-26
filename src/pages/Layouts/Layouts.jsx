@@ -4,7 +4,10 @@ import "./layouts.css";
 import Add from "./images/Add.svg";
 import CustomLayoutcard from "../../components/Layouts/Customlayoutcard/CustomLayoutcard";
 import Templatelayoutcard from "../../components/Layouts/TemplateLayoutcard/Templatelayoutcard";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 const Layouts = () => {
+  let location=useLocation()
+  let navigate=useNavigate()
   let [activeTab,setactiveTab]=useState("custom")
   function switchActiveTab(tab){
     setactiveTab(tab)
@@ -31,11 +34,12 @@ const Layouts = () => {
     },
   ]
   return (
-    <div className="layouts-container">
+    <>
+    {location.pathname==="/layouts"?<div className="layouts-container">
       <div className="top-section">
         <h4>Layouts</h4>
         <div className="image-container">
-          <img src={Add} alt="AddButton" />
+          <img src={Add} alt="AddButton" onClick={()=>navigate("/layouts/newlayout")} />
         </div>
       </div>
       <div className="bottom-section">
@@ -57,7 +61,9 @@ const Layouts = () => {
         </div>}
       </div>
       {/* <Navbar /> */}
-    </div>
+    </div>:
+      <Outlet/>}
+    </>
   );
 };
 

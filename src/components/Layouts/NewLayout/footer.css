@@ -47,27 +47,25 @@
   box-sizing: border-box;
 }
 .remove-icon {
-  position: absolute;
-  top: 11%;
-  left: -29%;
-  width: 16px;
-  height: 16px;
-  object-fit: cover;
+  width: 8%;
+  margin-right: 4%;
 }
 .remove-parent {
-  position: absolute;
-  top: 28px;
-  left: 48px;
-  width: 85px;
-  height: 24px;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
 }
 .group-parent2,
 .rectangle-parent6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 180px;
-  height: 80px;
+  width: 50%;
+  height: 100%;
   color: var(--color-dimgray);
 }
 .group-parent2 {
