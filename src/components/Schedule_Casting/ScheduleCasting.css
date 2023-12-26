@@ -45,7 +45,6 @@
 }
 
 .arrow-left{
-    /* top: 15.84%; */
     height: 50%;
 }
 
@@ -255,7 +254,6 @@ span{
 }
 
 .discard-btn{
-    /* width: 80%; */
     height: 100%;
     font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
     background-color: #fff;
