@@ -149,18 +149,27 @@ const Untitled = () => {
                 : () => navigate("/layouts/newlayout")
             }
           />
-          <div className="right"  style={location.pathname==="/cast/configuration"?{width:"30%"}:{width:"20%"}}>
+          <div
+            className="right"
+            style={
+              location.pathname === "/cast/configuration"
+                ? { width: "30%" }
+                : { width: "20%" }
+            }
+          >
             <img src={add} alt="" onClick={() => setAddnewdiplay(true)} />
-           {location.pathname!=="/cast/configuration"? <img
-              src={hotspot}
-              alt=""
-              onClick={() => setshowwifidevices(true)}
-            />:
-            <>
-          <img src={Monitor} alt=""/>
-          <img src={Calendar} alt=""/>
-          </>
-}
+            {location.pathname !== "/cast/configuration" ? (
+              <img
+                src={hotspot}
+                alt=""
+                onClick={() => setshowwifidevices(true)}
+              />
+            ) : (
+              <>
+                <img src={Monitor} alt="" />
+                <img src={Calendar} alt="" />
+              </>
+            )}
           </div>
         </div>
         <h4>Untitled</h4>
@@ -260,18 +269,37 @@ const Untitled = () => {
         </div>
       </div>
       <div className="buttons">
-        <div className="left" onClick={() => navigate("/layouts/newlayout")}>
-          <img src={close} alt="close" />
-          <span>Discard</span>
-        </div>
-        {castingScreen ? (
-          <div className="right">
-            <span>Save</span>
-            <img src={arrow} alt="next" />
+        {location.pathname === "/layouts/untitled" ? (
+          <div className="left" onClick={() => navigate("/layouts/newlayout")}>
+            <img src={close} alt="close" />
+            <span>Discard</span>
           </div>
         ) : (
+          <div
+            className="left"
+            onClick={() => navigate("/cast/newconfiguation")}
+          >
+            <img src={close} alt="close" />
+            <span>Discard</span>
+          </div>
+        )}
+        {location.pathname === "/layouts/untitled" ? (
+          <>
+            {castingScreen ? (
+              <div className="right">
+                <span>Save</span>
+                <img src={arrow} alt="next" />
+              </div>
+            ) : (
+              <div className="right">
+                <span>Next</span>
+                <img src={arrow} alt="next" />
+              </div>
+            )}
+          </>
+        ) : (
           <div className="right">
-            <span>Next</span>
+            <span>Cast now</span>
             <img src={arrow} alt="next" />
           </div>
         )}
