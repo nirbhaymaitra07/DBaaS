@@ -12,7 +12,7 @@ function App() {
       <Structure/>
     </BrowserRouter>
    
-    <ScheduleCasting />
+    {/* <ScheduleCasting /> */}
     </>
     
   )
