@@ -10,9 +10,9 @@ const CustomLayoutcard = ({item}) => {
     Navigate('/cast/castenvironment', { state: { imgSrc } });
   };
   return (
-    <div className='custom-layout'>
+    <div className='custom-layout' onClick={location.pathname==="/cast/layouts"?()=>{Navigate("/cast/newapp",{layoutName:item.Area})}:() => handleClick(item?.img)}>
       <div className="layout-section">
-        <img src={item?.img} alt="" onClick={() => handleClick(item?.img)} />
+        <img src={item?.img} alt=""  />
       </div>
       <div className="layout-details">
         <h5 className="layout-name">{item?.Area}</h5>
