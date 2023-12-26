@@ -255,20 +255,22 @@ span{
 }
 
 .discard-btn{
-    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-    height: 100%;
     /* width: 80%; */
+    height: 100%;
+    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
     background-color: #fff;
     color: #555;
     border-radius: 0%; 
     margin: 0px;
     padding: 3%;
+    font-weight: 400;
 }
 
 .schedule-btn{
     width: 50%;
     border-radius: 0%;
     background-color: #13027C;
+    font-weight: 400;
     font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
 }
 

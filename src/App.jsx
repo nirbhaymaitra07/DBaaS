@@ -7,11 +7,9 @@ function App() {
 
   return (
     <>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Structure/>
-    </BrowserRouter> */}
-   
-    <ScheduleCasting />
+    </BrowserRouter>
     </>
   )
 }
