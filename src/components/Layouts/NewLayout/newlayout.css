@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .newlayout-container {
     width: 100%;
     height: 100%;
@@ -26,7 +29,7 @@
     margin-left: 4%;
   }
   .newlayout-container .bottom-container {
-    width: auto;
+    width: 100%;
     height: 76.5%;
     padding: 0 4.4%;
     overflow-y: auto;
@@ -49,6 +52,7 @@
     border: none;
     padding-left: 3%;
     margin-top: 3%;
+    color: #2c2c2c;
   }
   .bottom-container .nameContainer input::placeholder {
     color: rgb(44, 44, 44);
@@ -57,11 +61,12 @@
   .nameContainer {
     position: absolute;
     top: 15%;
+    box-sizing: border-box;
   }
   .card {
     display: flex;
     /* margin-top: 90px; */
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -83,8 +88,7 @@
     display: flex;
     justify-content: space-between;
     gap: 0px;
-    /* margin-left: 2%; */
-    margin-right: 6.5%;
+   
   }
   .box1 {
     display: flex;
@@ -137,6 +141,7 @@
     border: none;
     padding-left: 3%;
     margin-top: 3%;
+    color: #2c2c2c;
   }
   .bottom-container .htContainer input::placeholder {
     color: rgb(44, 44, 44);
@@ -212,7 +217,7 @@
     flex-direction: row;
     position: absolute;
     top:84%;
-    width: 100%;
+    width: 90%;
   }
   .moreDev{
     color: #13027C;
@@ -226,6 +231,6 @@
   #footer{
     display: flex;
     position: absolute;
-    top: 95%;
+    top: 90%;
     width: 100%;
   }

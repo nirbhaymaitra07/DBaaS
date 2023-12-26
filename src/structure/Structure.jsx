@@ -4,7 +4,8 @@ import Home from "../pages/Home/Home";
 import Layouts from "../pages/Layouts/Layouts";
 import Cast from "../pages/Cast/Cast";
 import Navbar from "../components/Navbar/Navbar";
- import Newlayout from "../components/Layouts/NewLayout/Newlayout";
+import Newlayout from "../components/Layouts/NewLayout/Newlayout";
+import Untitled from "../components/Layouts/NewLayout/Untitled/Untitled";
 
 const Structure = () => {
   let location = useLocation();
@@ -12,12 +13,16 @@ const Structure = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/layouts" element={<Layouts />} />
+        <Route path="/layouts" element={<Layouts />}>
+          <Route path="/layouts/newlayout" element={<Newlayout />} />
+          <Route path="/layouts/untitled" element={<Untitled />} />
+        </Route>
         <Route path="/cast" element={<Cast />} />
         <Route path="/profile" element={<Cast />} />
-       
       </Routes>
-     {(location.pathname==="/" || location.pathname==="/layouts" || location.pathname==="/cast") && <Navbar />}
+      {(location.pathname === "/" ||
+        location.pathname === "/layouts" ||
+        location.pathname === "/cast") && <Navbar />}
     </>
   );
 };
