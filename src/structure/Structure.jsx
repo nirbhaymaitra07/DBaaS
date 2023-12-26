@@ -6,6 +6,9 @@ import Cast from "../pages/Cast/Cast";
 import Navbar from "../components/Navbar/Navbar";
 import Newlayout from "../components/Layouts/NewLayout/Newlayout";
 import Untitled from "../components/Layouts/NewLayout/Untitled/Untitled";
+import Cast_Environment from "../pages/Cast/Cast_Environment/Cast_Environment";
+import Preview from "../pages/Cast/Preview/Preview";
+import Apps from "../pages/Cast/Apps/Apps";
 
 const Structure = () => {
   let location = useLocation();
@@ -13,11 +16,12 @@ const Structure = () => {
     <>
        <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/layouts" element={<Layouts />} />
+        {/* <Route path="/layouts" element={<Layouts />} /> */}
         <Route path="/cast" element={<Cast />} >
              <Route path="/cast/castenvironment" element={<Cast_Environment/>}/>
              <Route path="/cast/preview" element={<Preview/>}/>
              <Route path="/cast/Apps" element={<Apps/>}/>
+             <Route path="/cast/configuration" element={<Untitled />}/>
           </Route>
         <Route path="/layouts" element={<Layouts />}>
           <Route path="/layouts/newlayout" element={<Newlayout />} />

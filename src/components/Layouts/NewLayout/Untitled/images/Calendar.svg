@@ -1,0 +1,15 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Notes Clock" clip-path="url(#clip0_1267_1690)">
+<path id="Vector" d="M10.2695 14.375C10.2695 15.7011 10.7963 16.9729 11.734 17.9105C12.6717 18.8482 13.9434 19.375 15.2695 19.375C16.5956 19.375 17.8674 18.8482 18.8051 17.9105C19.7427 16.9729 20.2695 15.7011 20.2695 14.375C20.2695 13.0489 19.7427 11.7771 18.8051 10.8395C17.8674 9.90178 16.5956 9.375 15.2695 9.375C13.9434 9.375 12.6717 9.90178 11.734 10.8395C10.7963 11.7771 10.2695 13.0489 10.2695 14.375Z" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M17.4795 14.375H15.2695V12.165" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M7.76956 16.875H2.76956C2.60428 16.8791 2.43989 16.8496 2.28638 16.7882C2.13286 16.7269 1.99341 16.635 1.87651 16.518C1.7596 16.4011 1.66768 16.2617 1.60632 16.1082C1.54496 15.9547 1.51544 15.7903 1.51956 15.625V3.21417C1.50831 2.87098 1.63355 2.53732 1.86786 2.28631C2.10216 2.03529 2.42641 1.88739 2.76956 1.875H15.2696C15.6127 1.88739 15.937 2.03529 16.1713 2.28631C16.4056 2.53732 16.5308 2.87098 16.5196 3.21417V6.875" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M5.26953 0.625V4.375" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M9.01953 0.625V4.375" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M12.7695 0.625V4.375" stroke="#13027C" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1267_1690">
+<rect width="20" height="20" fill="white" transform="translate(0.894531)"/>
+</clipPath>
+</defs>
+</svg>

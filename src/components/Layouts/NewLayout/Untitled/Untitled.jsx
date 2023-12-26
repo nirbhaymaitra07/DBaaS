@@ -13,15 +13,18 @@ import hotspotarrow from "./images/hotspotarrow.svg";
 import rotate_horizontal from "./images/rotate_horizontal.svg";
 import rotate_bar from "./images/rotate_bar.svg";
 import rotateall from "./images/rotateall.svg";
+import Monitor from "./images/Monitor.svg";
+import Calendar from "./images/Calendar.svg";
 import Castingdevice from "../../CastingDevice/Castingdevice";
 import WifiDevices from "../../Wifi_Devices/WifiDevices";
 import Addnewdisplay from "../../AddNewDisplay/Addnewdisplay";
 import Newdisplay from "../../Newdisplay/Newdisplay";
 import Newbackground from "../../Newbackground/Newbackground";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 const Untitled = () => {
   let navigate = useNavigate();
   let rotatebar = useRef(null);
+  let location = useLocation();
   let [showcastingdevices, setshowcastingdevices] = useState(false);
   let [showwifidevices, setshowwifidevices] = useState(false);
   let [wifinetwork, setwifinetwork] = useState("");
@@ -146,13 +149,18 @@ const Untitled = () => {
                 : () => navigate("/layouts/newlayout")
             }
           />
-          <div className="right">
+          <div className="right"  style={location.pathname==="/cast/configuration"?{width:"30%"}:{width:"20%"}}>
             <img src={add} alt="" onClick={() => setAddnewdiplay(true)} />
-            <img
+           {location.pathname!=="/cast/configuration"? <img
               src={hotspot}
               alt=""
               onClick={() => setshowwifidevices(true)}
-            />
+            />:
+            <>
+          <img src={Monitor} alt=""/>
+          <img src={Calendar} alt=""/>
+          </>
+}
           </div>
         </div>
         <h4>Untitled</h4>
