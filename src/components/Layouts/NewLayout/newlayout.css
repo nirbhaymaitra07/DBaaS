@@ -195,7 +195,9 @@
   }
   .Container{
     position: absolute;
-    top:74%
+    top:74%;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   .merge{
     display: block;

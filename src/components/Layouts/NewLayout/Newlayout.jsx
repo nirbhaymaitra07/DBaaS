@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./newlayout.css";
 import Footer from "./Footer";
 import arrow from "./images/Arrow Left.svg";
@@ -7,22 +7,26 @@ import arrowdown from "./images/Arrow Down 1.svg";
 import horizontal from "./images/Merge Table Horizontal.svg";
 import add from "./images/Add.svg";
 import { useNavigate } from "react-router-dom";
+import { DataProvider } from "../../../Context/ContextProvider";
 
-const Newlayout = () => {
+const Newlayout = React.memo(() => {
   let navigate = useNavigate();
   const [heightCount, setHeightCount] = useState(0);
   const [widthCount, setWidthCount] = useState(0);
-  const [devCount, setdevCount] = useState(0);
+  const [devCount, setdevCount] = useState("0");
   const [ftBackgroundColor, setFtBackgroundColor] = useState("#13027C");
   const [mBackgroundColor, setMBackgroundColor] = useState("#DFDFDF");
   const [ftTextColor, setFtTextColor] = useState("#FFFFFF");
   const [mTextColor, setMTextColor] = useState("#4A5A70");
+
+  let { handleLayoutOnChange, gridLayoutform,handleNoOfDevicesOnChange } = useContext(DataProvider);
+  console.log(gridLayoutform);
   const toggleColors = (clicked) => {
     if (clicked === "ft") {
       setFtBackgroundColor("#13027C");
       setMBackgroundColor("#DFDFDF");
       setFtTextColor("#FFFFFF");
-      setMTextColor("#4A5A70");
+      setMTextColor("#4A5A70"); 
     } else if (clicked === "m") {
       setFtBackgroundColor("#DFDFDF");
       setMBackgroundColor("#13027C");
@@ -49,13 +53,15 @@ const Newlayout = () => {
       setWidthCount(widthCount - 1);
     }
   };
-  const increasedevCount = () => {
-    setdevCount(devCount + 1);
+  const increasedevCount = (e) => {
+    setdevCount(parseInt(devCount) + 1);
+    handleNoOfDevicesOnChange(parseInt(devCount) + 1)
   };
 
   const decreasedevCount = () => {
     if (devCount > 0) {
-      setdevCount(devCount - 1);
+      setdevCount(parseInt(devCount) - 1);
+      handleNoOfDevicesOnChange(parseInt(devCount) - 1)
     }
   };
 
@@ -78,7 +84,14 @@ const Newlayout = () => {
       <div className="bottom-container">
         <div className="nameContainer">
           <p className="nameL">Layout Name</p>
-          <input className="inp" type="text" placeholder="Enter name" />
+          <input
+            className="inp"
+            type="text"
+            name="layoutName"
+            placeholder="Enter name"
+            value={gridLayoutform.layoutName}
+            onChange={(e) => handleLayoutOnChange(e)}
+          />
         </div>
         <div className="card">
           <div className="bg">Background</div>
@@ -113,7 +126,7 @@ const Newlayout = () => {
               src={arrowup}
               alt="up"
               className="up"
-              onClick={increaseHeightCount}
+              onClick={()=>increaseHeightCount(e)}
             />
             <img
               src={arrowdown}
@@ -158,6 +171,8 @@ const Newlayout = () => {
                 className="inpt"
                 type="number"
                 placeholder="0"
+                name="NoOfDevices"
+                onChange={(e) =>handleNoOfDevicesOnChange(devCount)}
                 value={devCount}
               />
               <img
@@ -200,7 +215,7 @@ const Newlayout = () => {
         </div>
         <div className="Container">
           <p className="ht">Device placement</p>
-          <div>
+          <div aria-disabled="true">
             <div className="inpt">
               <img src={horizontal} className="merge" />
               <p className="horizntl">Horizontal</p>
@@ -224,6 +239,6 @@ const Newlayout = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Newlayout;

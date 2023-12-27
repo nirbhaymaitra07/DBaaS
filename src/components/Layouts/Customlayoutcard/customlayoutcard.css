@@ -30,14 +30,14 @@
   font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
   color: #2c2c2c;
   font-weight: 400;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 .custom-layout .layout-details .created-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 .custom-layout .layout-details .created-container span {
   font-size: clamp(0.173125rem, -0.0005rem + 2.7778vw, 17.360625rem);
@@ -54,4 +54,13 @@
   font-size: clamp(0.173125rem, -0.0005rem + 2.7778vw, 17.360625rem);
   color: #555;
   font-weight: 400;
+}
+.hotspotcontainer{
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hotspotcontainer img{
+  width: 20%;
 }

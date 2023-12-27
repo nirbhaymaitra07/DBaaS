@@ -87,11 +87,12 @@
 }
 .untitled-container .bottom-section .layout-container {
   width: 100%;
-  height: 85%;
-  display: flex;
+  height: 73%;
+  margin-top: 15%;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease; */
 }
 .untitled-container .bottom-section .layout-container img {
   width: 100%;
@@ -247,7 +248,7 @@
   z-index: 2;
   background: rgb(44, 44, 44, 0.7);
 }
-.untitled-container .casting-container {
+.untitled-container .castingdevice-container {
   width: 100%;
   height: 60.87%;
   position: absolute;
@@ -263,26 +264,26 @@
   transition: 0.3s ease-in;
 }
 
-.untitled-container .casting-container .top-wifi-name {
+.untitled-container .castingdevice-container .top-wifi-name {
   width: 100%;
   height: 3.28%;
   display: flex;
   align-items: center;
   margin-bottom: 1.64%;
 }
-.untitled-container .casting-container .casting-container-bottom {
+.untitled-container .castingdevice-container .casting-container-bottom {
   width: 100%;
   height: 90%;
   overflow-y: auto;
 }
-.untitled-container .casting-container .casting-container-bottom::-webkit-scrollbar{
+.untitled-container .castingdevice-container .casting-container-bottom::-webkit-scrollbar{
   display: none;
 }
-.untitled-container .casting-container .top-wifi-name img {
+.untitled-container .castingdevice-container .top-wifi-name img {
   height: 75%;
   margin-right: 2.22%;
 }
-.untitled-container .casting-container .top-wifi-name span {
+.untitled-container .castingdevice-container .top-wifi-name span {
   font-size: clamp(0.208125rem, -0.0002rem + 3.3334vw, 20.8333125rem);
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #838383;
@@ -309,7 +310,7 @@
   background: #fff;
   box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   transition: 0.3s ease-in;
 }
 .untitled-container .wifi-devices-conatiner .top-wifi-title{
