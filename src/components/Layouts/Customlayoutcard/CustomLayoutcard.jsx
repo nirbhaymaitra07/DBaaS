@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./customlayoutcard.css"
 import testlayout from "./images/testlayout.svg"
 import { useLocation,useNavigate, } from 'react-router-dom';
+import { DataProvider } from '../../../Context/ContextProvider';
 const CustomLayoutcard = ({item}) => {
-  console.log(item);
+  let {selectLayout}=useContext(DataProvider)
   let Navigate=useNavigate()
   let location=useLocation()
   const handleClick = (imgSrc) => {
     Navigate('/cast/castenvironment', { state: { imgSrc } });
   };
   return (
-    <div className='custom-layout' onClick={location.pathname==="/cast/layouts"?()=>{Navigate("/cast/newapp",{layoutName:item.Area})}:() => handleClick(item?.img)}>
+    <div className='custom-layout' onClick={location?.pathname==="/cast/layouts"?()=>{Navigate("/cast/newapp");selectLayout(item)}:() => handleClick(item?.img)}>
       <div className="layout-section">
         <img src={item?.img} alt=""  />
       </div>

@@ -1,38 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./chooselayout.css"
 import back from "./images/back.svg"
 import chavron from "./images/chavron.svg"
 import hotspot from "./images/hotspot.svg"
 import CustomLayoutcard from '../../../components/Layouts/Customlayoutcard/CustomLayoutcard'
 import { useNavigate } from 'react-router-dom'
+import { DataProvider } from '../../../Context/ContextProvider'
 const Chooselayout = () => {
     let navigate=useNavigate()
-    const DataConfiguration = [
-        {
-          img: chavron,
-          Area: "Daily - Common area",
-          CreatedBy: "Jose Anitt",
-          createon: "23/01/2023",
-          LastUsed: "28/05/2023",
-          HotSpot: hotspot, // Assuming PersonalHotspot is a variable
-        },
-        {
-          img: chavron,
-          Area: "June Menu",
-          CreatedBy: "Jose Anitt",
-          createon: "23/01/2023",
-          LastUsed: "28/05/2023",
-          HotSpot: hotspot, // Assuming PersonalHotspot is a variable
-        },
-        {
-          img: chavron,
-          Area: "Cafeteria",
-          CreatedBy: "Jose Anitt",
-          createon: "23/01/2023",
-          LastUsed: "28/05/2023",
-          HotSpot: hotspot, // Assuming PersonalHotspot is a variable
-        },
-      ];
+    const {CastingLayoutConnfig} = useContext(DataProvider)
   return (
     <div className='chooselayout-container'>
       <div className="top-section">
@@ -45,7 +21,7 @@ const Chooselayout = () => {
         <h4>Choose a layout</h4>
       </div>
       <div className="layouts-container">
-      {DataConfiguration.map((item)=><CustomLayoutcard item={item}/>)  }
+      {CastingLayoutConnfig.map((item)=><CustomLayoutcard item={item}/>)  }
       </div>
     </div>
   )

@@ -11,6 +11,7 @@ import Preview from "../pages/Cast/Preview/Preview"
 import Apps from "../pages/Cast/Apps/Apps"
 import Chooselayout from "../pages/Cast/ChooseLayout/Chooselayout";
 import NewAppConfig from "../pages/Cast/New_App_Config/NewAppConfig";
+import ScheduleCasting from "../components/Schedule_Casting/ScheduleCasting";
 
 const Structure = () => {
   let location = useLocation();
@@ -25,6 +26,7 @@ const Structure = () => {
              <Route path="/cast/configuration" element={<Untitled />}/>
              <Route path="/cast/layouts" element={<Chooselayout/>}/>
              <Route path="/cast/newapp" element={<NewAppConfig/>}/>
+             <Route path="/cast/schedulecasting" element={<ScheduleCasting/>}/>
           </Route>
         <Route path="/layouts" element={<Layouts />}>
           <Route path="/layouts/newlayout" element={<Newlayout />} />

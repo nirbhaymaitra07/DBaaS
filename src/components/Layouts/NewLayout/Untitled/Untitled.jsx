@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import "./untitled.css";
 import add from "./images/add.svg";
 import back from "./images/back.svg";
@@ -8,7 +14,7 @@ import rotate from "./images/rotate.svg";
 import close from "./images/close.svg";
 import ok from "./images/ok.svg";
 import arrow from "./images/arrow.svg";
-import layout from "./images/layout.svg";
+import layout1 from "./images/layout.svg";
 import hotspotarrow from "./images/hotspotarrow.svg";
 import rotate_horizontal from "./images/rotate_horizontal.svg";
 import rotate_bar from "./images/rotate_bar.svg";
@@ -21,10 +27,23 @@ import Addnewdisplay from "../../AddNewDisplay/Addnewdisplay";
 import Newdisplay from "../../Newdisplay/Newdisplay";
 import Newbackground from "../../Newbackground/Newbackground";
 import { useNavigate, useLocation } from "react-router-dom";
+import Casting from "../../../Schedule_Casting/Casting";
+import { DataProvider } from "../../../../Context/ContextProvider";
+import OnlyGrid from "../../../Grid/OnlyGrid";
 const Untitled = () => {
-  let navigate = useNavigate();
-  let rotatebar = useRef(null);
   let location = useLocation();
+  let { layout, gridLayoutform } = useContext(DataProvider);
+  let navigate = useNavigate();
+
+  setTimeout(() => {
+    if (
+      location.pathname === "/layouts/untitled" &&
+      !gridLayoutform.NoOfDevices
+    ) {
+      navigate("/layouts");
+    }
+  }, 0);
+  let rotatebar = useRef(null);
   let [showcastingdevices, setshowcastingdevices] = useState(false);
   let [showwifidevices, setshowwifidevices] = useState(false);
   let [wifinetwork, setwifinetwork] = useState("");
@@ -36,6 +55,7 @@ const Untitled = () => {
   let [rotatemodeon, setRotateModeOn] = useState(false);
   let [rotatemode, setRotateMode] = useState(false);
   let [fullrotatemode, setfullrotatemode] = useState(false);
+  let [schedulecasting, setschedulecasting] = useState(false);
 
   function selectWifiNetwork(wifi) {
     setshowwifidevices(false);
@@ -69,6 +89,9 @@ const Untitled = () => {
     setNewBackgroundPopUp(false);
     setAddnewdiplay(true);
   }
+  let hideschedulecasting = useCallback(() => {
+    setschedulecasting(false);
+  }, []);
 
   let Castingdevices = [
     {
@@ -103,22 +126,6 @@ const Untitled = () => {
       casting_name: "Chrome Cast(7)",
       isAvailabel: false,
     },
-    {
-      casting_name: "Chrome Cast(7)",
-      isAvailabel: false,
-    },
-    {
-      casting_name: "Chrome Cast(7)",
-      isAvailabel: false,
-    },
-    {
-      casting_name: "Chrome Cast(7)",
-      isAvailabel: false,
-    },
-    {
-      casting_name: "Chrome Cast(7)",
-      isAvailabel: false,
-    },
   ];
 
   let wifiDevices = [
@@ -144,9 +151,9 @@ const Untitled = () => {
             src={back}
             alt=""
             onClick={
-              rotatemode
-                ? () => setRotateMode(false)
-                : () => navigate("/layouts/newlayout")
+              location.pathname === "/layouts/untitled"
+                ? rotatemode? () => setRotateMode(false):() => navigate("/layouts")
+                : () => navigate("/cast/layouts")
             }
           />
           <div
@@ -167,7 +174,11 @@ const Untitled = () => {
             ) : (
               <>
                 <img src={Monitor} alt="" />
-                <img src={Calendar} alt="" />
+                <img
+                  src={Calendar}
+                  alt=""
+                  onClick={() => setschedulecasting(true)}
+                />
               </>
             )}
           </div>
@@ -207,13 +218,18 @@ const Untitled = () => {
             </>
           )}
         </div>
-        <div className="layout-container">
-          <img
-            src={layout}
-            alt=""
-            onClick={showCastingdevices}
-            style={{ transform: `rotate(${rotatedegree}deg)` }}
-          />
+        <div className="layout-container" style={{ transform: `rotate(${rotatedegree}deg)`,background:"red" }} >
+          {location.pathname === "/cast/configuration" ? (
+            <img src={layout.img} alt="" />
+          ) : (
+            // <img
+            //   src={layout?layout:layout1}
+            //   alt=""
+            //   onClick={showCastingdevices}
+            //   style={{ transform: `rotate(${rotatedegree}deg)` }}
+            // />
+            <OnlyGrid   showCastingdevices={showCastingdevices}/>
+          )}
         </div>
         <div className="angle-container">
           <div
@@ -311,7 +327,7 @@ const Untitled = () => {
             ? { transform: "translateY(0%)" }
             : { transform: "translateY(102%)" }
         }
-        onClick={()=>setshowwifidevices(false)}
+        onClick={() => setshowwifidevices(false)}
       >
         <div
           className="wifi-devices-conatiner"
@@ -320,7 +336,6 @@ const Untitled = () => {
               ? { transform: "translateY(0%)" }
               : { transform: "translateY(102%)" }
           }
-          
         >
           <div className="top-wifi-title">
             <span>Select a WIFI network:</span>
@@ -345,7 +360,7 @@ const Untitled = () => {
         }
       >
         <div
-          className="casting-container"
+          className="castingdevice-container"
           style={
             showcastingdevices
               ? { transform: "translateY(0%)" }
@@ -402,6 +417,10 @@ const Untitled = () => {
       >
         <Newbackground hideNewBackgroundPop={hideNewBackgroundPop} />
       </div>
+      <Casting
+        schedulecasting={schedulecasting}
+        hideschedulecasting={hideschedulecasting}
+      />
     </div>
   );
 };
