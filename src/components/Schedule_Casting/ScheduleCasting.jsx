@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import "./ScheduleCasting.css";
 import Back from "./images/Back.svg";
 import ArrowLeft from "./images/Arrow-Left.svg";
@@ -13,26 +13,48 @@ import CalendarBody from "./images/Calendar-body.svg";
 import LineBody from "./images/Line-body.svg";
 import Add from "./images/Add.svg";
 import Frame from "./images/Frame.svg";
+import { useLocation, useNavigate } from "react-router-dom";
+import { DataProvider } from "../../Context/ContextProvider";
+import Casting from "./Casting";
 
 const ScheduleCasting = () => {
   const [addTimeSlot, setAddTimeSlot] = useState(false);
-
+  let [schedulecasting, setschedulecasting] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  let [ShowCustomCastingSchedule, setShowCustomCastingSchedule] =
+    useState(false);
+  let [Week, setWeek] = useState("");
+  let location = useLocation();
+  let { selectedFrequency } = useContext(DataProvider);
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  function showCustomSchedule(weekdays) {
+    setWeek(weekdays);
+    setShowCustomCastingSchedule(true);
+  }
+  let hideschedulecasting = useCallback(() => {
+    setschedulecasting(false);
+  }, []);
+  let navigate = useNavigate();
   const options = [
     { value: "option1", label: "Friday" },
     { value: "option2", label: "Saturday" },
     { value: "option3", label: "Sunday" },
     // Add more options as needed
   ];
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value); // Update the selected option in state
-  };
-
   return (
     <div className="main-container">
       <div className="casting-header">
         <div className="back-image">
-          <img src={Back} />
+          <img
+            src={Back}
+            onClick={
+              !ShowCustomCastingSchedule
+                ? () => navigate("/cast/layouts")
+                : () => setShowCustomCastingSchedule(false)
+            }
+          />
         </div>
         <div className="heading">Schedule Casting</div>
       </div>
@@ -72,8 +94,21 @@ const ScheduleCasting = () => {
 
       <div className="casting-body">
         <div className="casting-upper">
-          <p className="daily-para">Daily</p>
-          <p className="change-para">Change</p>
+          <p className="daily-para">
+            {!ShowCustomCastingSchedule ? selectedFrequency : Week}
+          </p>
+          <p
+            className="change-para"
+            onClick={
+              addTimeSlot
+                ? () => setAddTimeSlot(true)
+                : () => {
+                    setschedulecasting(true);
+                  }
+            }
+          >
+            Change
+          </p>
         </div>
 
         <div className="date-div">
@@ -98,27 +133,28 @@ const ScheduleCasting = () => {
           </div>
           <img className="line-body" src={LineBody} />
         </div>
-
-        <div className="day-div">
-          <p className="day">Day</p>
-          <div>
-            <select
-              className="custom-dropdown"
-              value={selectedOption}
-              onChange={handleOptionChange}
-            >
-              <option className="val" value="Thursday">
-                Thursday
-              </option>
-              {options.map((option, index) => (
-                <option key={index} value={option.value}>
-                  {option.label}
+        {ShowCustomCastingSchedule && (
+          <div className="day-div">
+            <p className="day">Day</p>
+            <div>
+              <select
+                className="custom-dropdown"
+                value={selectedOption}
+                onChange={handleOptionChange}
+              >
+                <option className="val" value="Thursday">
+                  Thursday
                 </option>
-              ))}
-            </select>
-            {/* {selectedOption && <p>Selected option: {selectedOption}</p>} Show the selected option */}
+                {options.map((option, index) => (
+                  <option key={index} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              {/* {selectedOption && <p>Selected option: {selectedOption}</p>} Show the selected option */}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="time-div">
           <p className="time-heading">Start Time</p>
@@ -177,19 +213,29 @@ const ScheduleCasting = () => {
             </div>
           </div>
 
-          {/* <div className="lower-body-text-div"  onClick={() => setAddTimeSlot(true)}>
-            <img className="lower-body-img" src={Add} />
-            <p className="lower-body-text">Add another time slot</p>
-          </div> */}
+          {!ShowCustomCastingSchedule && (
+            <div
+              className="lower-body-text-div"
+              onClick={() => setAddTimeSlot(true)}
+            >
+              <img className="lower-body-img" src={Add} />
+              <p className="lower-body-text">Add another time slot</p>
+            </div>
+          )}
         </div>
       </div>
 
       <div className="casting-footer">
         <div className="casting-footer-discard">
           <img className="casting-footer-discard-img" src={Remove} />
-          <button className="discard-btn">DISCARD</button>
+          <button
+            className="discard-btn"
+            onClick={() => navigate("/cast/layouts")}
+          >
+            DISCARD
+          </button>
         </div>
-        <button className="schedule-btn">SCHEDULE</button>
+        <button className="schedule-btn">Schedule</button>
       </div>
 
       <div
@@ -199,6 +245,7 @@ const ScheduleCasting = () => {
             ? { transform: "translateY(0%)" }
             : { transform: "translateY(102%)" }
         }
+        onClick={() => setAddTimeSlot(false)}
       >
         <div
           className="time-slot-popup"
@@ -208,17 +255,30 @@ const ScheduleCasting = () => {
               : { transform: "translateY(102%)" }
           }
         >
-          <div className="time-slot-popup-options">
+          <div
+            className="time-slot-popup-options"
+            onClick={() => showCustomSchedule("Weekdays(Mon-Fri)")}
+          >
             <p className="time-slot-popup-options-para">Weekdays(Mon-Fri)</p>
           </div>
-          <div className="time-slot-popup-options">
+          <div
+            className="time-slot-popup-options"
+            onClick={() => showCustomSchedule("Weekends(Sat-Sun)")}
+          >
             <p className="time-slot-popup-options-para">Weekends(Sat-Sun)</p>
           </div>
-          <div className="time-slot-popup-options">
+          <div
+            className="time-slot-popup-options"
+            onClick={() => showCustomSchedule("Custom")}
+          >
             <p className="time-slot-popup-options-para">Custom</p>
           </div>
         </div>
       </div>
+      <Casting
+        schedulecasting={schedulecasting}
+        hideschedulecasting={hideschedulecasting}
+      />
     </div>
   );
 };

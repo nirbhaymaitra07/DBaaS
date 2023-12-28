@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./NewAppConfig.css";
 import ArrowLeft from "./images/Arrow-left.svg";
 import ArrowRight from "./images/Arrow-right.svg";
 import Remove from "./images/Remove.svg";
+import { useLocation, useNavigate } from "react-router-dom";
+import { DataProvider } from "../../../Context/ContextProvider";
 
 const NewAppConfig = () => {
+  let {layout}=useContext(DataProvider)
+  let location=useLocation()
+  let navigate=useNavigate()
   return (
     <div className="main-container">
       <div className="app-config-header">
@@ -21,7 +26,7 @@ const NewAppConfig = () => {
         <div className="app-config-body-form">
           <form className="form-div">
             <label className="form-details">Layout</label>
-            <input className="form-details-input-1" />
+            <input className="form-details-input-1" value={layout?.Area}/>
             <label className="form-details">App Configuration Name</label>
             <input className="form-details-input-2" placeholder="Enter Name" />
           </form>
@@ -34,7 +39,7 @@ const NewAppConfig = () => {
           <button className="discard-btn">DISCARD</button>
         </div>
 
-        <div className="app-config-next">
+        <div className="app-config-next" onClick={()=>navigate("/cast/configuration",{state:{layout:location?.state?.layout}})}>
           Next
           <img className="app-config-next-img" src={ArrowRight} />
         </div>

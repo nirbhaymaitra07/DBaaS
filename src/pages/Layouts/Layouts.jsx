@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import "./layouts.css";
 import Add from "./images/Add.svg";
+import chevron from "./images/chevron.svg";
 import CustomLayoutcard from "../../components/Layouts/Customlayoutcard/CustomLayoutcard";
 import Templatelayoutcard from "../../components/Layouts/TemplateLayoutcard/Templatelayoutcard";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
@@ -13,26 +14,32 @@ const Layouts = () => {
     setactiveTab(tab)
   }
 
-  let data=[
+  const DataConfiguration = [
     {
-      "Layout_Name":"Common Area ",
-      "created_by":"Jose Anitt",
-      "devices":"5",
-      "last_used":"28/05/2023"
+      img: chevron,
+      Area: "Daily - Common area",
+      CreatedBy: "Jose Anitt",
+      createon: "23/01/2023",
+      LastUsed: "28/05/2023",
+      HotSpot: "", // Assuming PersonalHotspot is a variable
     },
     {
-      "Layout_Name":"Cafeteria",
-      "created_by":"Jose Anitt",
-      "devices":"3",
-      "last_used":"28/05/2023"
+      img: chevron,
+      Area: "June Menu",
+      CreatedBy: "Jose Anitt",
+      createon: "23/01/2023",
+      LastUsed: "28/05/2023",
+      HotSpot: "", // Assuming PersonalHotspot is a variable
     },
     {
-      "Layout_Name":"Reception",
-      "created_by":"Jose Anitt",
-      "devices":"2",
-      "last_used":"28/05/2023"
+      img: chevron,
+      Area: "Cafeteria",
+      CreatedBy: "Jose Anitt",
+      createon: "23/01/2023",
+      LastUsed: "28/05/2023",
+      HotSpot: "", // Assuming PersonalHotspot is a variable
     },
-  ]
+  ];
   return (
     <>
     {location.pathname==="/layouts"?<div className="layouts-container">
@@ -52,7 +59,7 @@ const Layouts = () => {
           </div>
         </div>
        {activeTab==="custom"? <div className="custom-card-container">
-         {data.map((item)=><CustomLayoutcard key={item.Layout_Name} item={item}/>) }
+         {DataConfiguration.map((item)=><CustomLayoutcard key={item.Area} item={item}/>) }
          
         </div>:<div className="templates-card-container">
           <Templatelayoutcard/>

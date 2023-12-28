@@ -29,7 +29,7 @@
   
   .date-time-top-subdiv{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       height: 50%;
       width: 100%;
   }

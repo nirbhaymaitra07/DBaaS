@@ -245,6 +245,8 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  outline: none;
 }
 
 .casting-footer-discard-img {
@@ -258,6 +260,8 @@ span {
   background-color: #fff;
   color: #555;
   border-radius: 0%;
+  outline: none !important;
+  border: none;
   margin: 0px;
   padding: 3%;
   font-weight: 400;
