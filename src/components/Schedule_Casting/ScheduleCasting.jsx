@@ -232,7 +232,7 @@ const ScheduleCasting = () => {
             className="discard-btn"
             onClick={() => navigate("/cast/layouts")}
           >
-            DISCARD
+            Discard
           </button>
         </div>
         <button className="schedule-btn">Schedule</button>

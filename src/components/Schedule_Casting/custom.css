@@ -1,3 +1,4 @@
+/*
 .custom-container {
     height: 100%;
     width: 100%;
@@ -43,7 +44,7 @@
   }
   
   .arrow-left{
-      /* top: 15.84%; */
+
       height: 50%;
   }
   
@@ -142,11 +143,12 @@
       border-radius: 10px;
       padding-left: 2%;
       margin-bottom: 4%;
+      padding-right: 4%;
   }
   
   .date-input-image{
       position: absolute;
-      right: 1%;
+      right: 4%;
       padding-top: 2%;
   }
   
@@ -154,7 +156,7 @@
       display: flex;
       justify-content: space-around;
       padding-left: 30%;
-      padding-top: 10%;
+      padding-top: 4%;
   }
   
   .time-div{
@@ -227,7 +229,6 @@
   }
   .custom-dropdown{
 border-radius: 8px;
-/* opacity: 0.05; */
 position: relative;
 background-color: rgb(19, 2, 124,0.05);
 color: #555555;
@@ -258,3 +259,4 @@ margin-top: -1%;
   .day-div{
     margin-bottom: 5%;
   }
+  */

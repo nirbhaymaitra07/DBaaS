@@ -143,13 +143,14 @@ span {
   position: absolute;
   justify-content: space-between;
   border-radius: 10px;
-  padding-left: 2%;
+  padding-left: 4%;
   margin-bottom: 4%;
+  padding-right: 4%;
 }
 
 .date-input-image {
   position: absolute;
-  right: 1%;
+  right: 4%;
   padding-top: 2%;
 }
 
@@ -337,4 +338,15 @@ span {
 }
 .day-div {
   margin-bottom: 5%;
+}
+.custom-dropdown {
+  border-radius: 8px;
+  position: relative;
+  background-color: rgb(19, 2, 124, 0.05);
+  color: #555555;
+  width: 100%;
+  height: 40px;
+  margin-top: 3%;
+  border: none;
+  padding-left: 3%;
 }
