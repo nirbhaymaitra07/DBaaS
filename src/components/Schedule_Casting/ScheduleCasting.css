@@ -320,7 +320,7 @@ span {
 .day {
   color: #2c2c2c;
   font-family: Poppins;
-  font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;

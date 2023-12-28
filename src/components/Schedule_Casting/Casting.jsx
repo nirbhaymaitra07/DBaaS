@@ -50,42 +50,42 @@ let {handleFrequencyChange,selectedFrequency}=useContext(DataProvider)
           <div className="radiosec">
             <input
               type="radio"
-              id="weekdays"
+              id="Weekdays"
               name="frequency"
-              value="weekdays"
-              checked={selectedFrequency === "weekdays"}
+              value="Weekdays"
+              checked={selectedFrequency === "Weekdays"}
               onChange={(e)=>handleFrequencyChange(e.target.value)}
               onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
             />
-            <label htmlFor="weekdays">Weekdays (Mon-Fri)</label>
+            <label htmlFor="Weekdays">Weekdays (Mon-Fri)</label>
           </div>
 
           <div className="radiosec">
             {" "}
             <input
               type="radio"
-              id="weekends"
+              id="Weekends"
               name="frequency"
-              value="weekends"
-              checked={selectedFrequency === "weekends"}
+              value="Weekends"
+              checked={selectedFrequency === "Weekends"}
               onChange={(e)=>handleFrequencyChange(e.target.value)}
               onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
             />
-            <label htmlFor="weekends">Weekends (Sat-Sun)</label>
+            <label htmlFor="Weekends">Weekends (Sat-Sun)</label>
           </div>
 
          <div className="radiosec">
             {" "}
              <input
               type="radio"
-              id="custom"
+              id="Custom"
               name="frequency"
-              value="custom"
-              checked={selectedFrequency === "custom"}
+              value="Custom"
+              checked={selectedFrequency === "Custom"}
               onChange={(e)=>handleFrequencyChange(e.target.value)} 
               onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
             />
-            <label htmlFor="custom">Custom</label>
+            <label htmlFor="Custom">Custom</label>
           </div>
          
         </div>
