@@ -52,7 +52,7 @@ const Cast_Environment = () => {
             id={zoomed ? 'zoomed' : ''}
             />
         </div>
-        <div className='Cast_Rotation_img'>
+        <div className='Cast_Env_Rotation_img'>
             <img src={RotationGraph} alt="RotationGraph"  className='RotationGraph'/>
         </div>
         <div className='Discard_CastNow_Btn'>
