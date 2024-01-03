@@ -1,47 +1,46 @@
 .group-child8,
 .group-parent1 {
+  width: 328px;
+  height: 258px;
   position: absolute;
   top: 384px;
   left: 16px;
-  width: 328px;
-  height: 258px;
 }
 .group-child8 {
-  top: 0;
-  left: 0;
-  background-color: #13027C;
   width: 180px;
   height: 80px;
+  top: 0;
+  left: 0;
+  background-color: #13027c;
 }
 .arrow-right-icon {
+  width: 16px;
+  height: 16px;
   position: absolute;
   top: 4px;
   left: 43px;
-  width: 16px;
-  height: 16px;
   overflow: hidden;
   object-fit: cover;
 }
 .arrow-right-parent {
+  width: 59px;
+  height: 24px;
   position: absolute;
   top: 28px;
   left: 61px;
-  width: 59px;
-  height: 24px;
 }
 .group-child9,
 .rectangle-parent5 {
-  position: absolute;
-  top: 0;
   width: 180px;
   height: 80px;
+  position: absolute;
+  top: 0;
 }
 .rectangle-parent5 {
   left: 180px;
   cursor: pointer;
 }
 .group-child9 {
-  left: 0;
   background-color: var(--color-white);
   border-top: 1px solid #838383;
   box-sizing: border-box;
@@ -56,8 +55,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  
 }
 .group-parent2,
 .rectangle-parent6 {
@@ -73,19 +70,19 @@
   font-size: var(--font-size-base);
   color: var(--color-white);
 }
-.height{
-    color: #FFF;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.height {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
 }
-.add-more-devices{
-    color: #555;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.add-more-devices {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #555;
 }

@@ -1,12 +1,12 @@
 .main-container {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .app-config-header {
-  position: relative;
   height: 13.37%;
   width: 100%;
+  position: relative;
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
@@ -18,14 +18,14 @@
 }
 
 .app-config-header-heading {
-  position: absolute;
   width: 100%;
   height: 25.23%;
-  color: #2c2c2c;
-  font-weight: 400;
-  font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
+  position: absolute;
   top: 59.81%;
   left: 4.44%;
+  font-weight: 400;
+  font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
+  color: #2c2c2c;
 }
 
 .app-config-header-heading p {
@@ -33,9 +33,9 @@
 }
 
 .app-config-body {
-  position: relative;
-  height: 76.625%;
   width: 100%;
+  height: 76.625%;
+  position: relative;
   padding-top: 2%;
   padding-left: 4.44%;
   padding-right: 4.44%;
@@ -43,7 +43,6 @@
 }
 
 .app-config-body-form {
-  /* position: absolute; */
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -60,30 +59,29 @@
 }
 
 .form-details-input-1 {
-  background-color: rgb(19, 2, 124, 0.1);
-  border-style: none;
-  border-radius: 8px;
-  margin-bottom: 8%;
-  margin-top: 0.5%;
   width: 100%;
   height: 5%;
-  color: #2C2C2C;
+  margin-top: 0.5%;
+  margin-bottom: 8%;
   padding-left: 4.44%;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(19, 2, 124, 0.1);
+  color: #2c2c2c;
 }
 
 .form-details-input-2 {
-  background-color: rgb(19, 2, 124, 0.1);
-  border-style: none;
-  border-radius: 8px;
-  /* margin-top: 0.5%; */
   width: 100%;
   height: 5%;
   padding-left: 4.44%;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(19, 2, 124, 0.1);
 }
 
 .app-config-footer {
-  height: 10%;
   width: 100%;
+  height: 10%;
   display: flex;
 }
 
@@ -101,13 +99,13 @@
 
 .discard-btn {
   height: 100%;
-  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-  background-color: #fff;
-  color: #555;
-  border-radius: 0%;
   margin: 0px;
   padding: 3%;
+  border-radius: 0%;
+  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
   font-weight: 400;
+  background-color: #fff;
+  color: #555;
 }
 
 .app-config-next {
@@ -115,8 +113,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #13027c;
   font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+  background-color: #13027c;
 }
 .app-config-next img {
   width: 9%;
@@ -124,22 +122,13 @@
 }
 
 .next-btn {
-  height: 100%;
-
-  border-radius: 0%;
-  margin: 0px;
-  padding: 3%;
-  font-weight: 400;
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0px;
+  padding: 3%;
+  border-radius: 0%;
+  font-weight: 400;
 }
-
-/* .next-btn{
-    width: 50%;
-    border-radius: 0%;
-    background-color: #13027C;
-    font-weight: 400;
-    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-} */

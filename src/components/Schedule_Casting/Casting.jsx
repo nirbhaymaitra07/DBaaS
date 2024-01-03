@@ -3,13 +3,10 @@ import arrow from "./images/ArrowLeft1.svg";
 import "./casting.css";
 import { Link, useNavigate } from "react-router-dom";
 import { DataProvider } from "../../Context/ContextProvider";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import ScheduleCasting from "./ScheduleCasting";
+
 function Casting({ schedulecasting, hideschedulecasting }) {
-  // const [Frequency, setFrequency] = useState("");
-let {handleFrequencyChange,selectedFrequency}=useContext(DataProvider)
-  let navigate=useNavigate()
-  
+  let { handleFrequencyChange, selectedFrequency } = useContext(DataProvider);
+  let navigate = useNavigate();
   return (
     <div
       className="casting-container"
@@ -32,21 +29,23 @@ let {handleFrequencyChange,selectedFrequency}=useContext(DataProvider)
       </div>
       <div className="cast-section">
         <div className="btn-section">
-          
-            {" "}
-           <div className="radiosec" >
-              <input
-                type="radio"
-                id="daily"
-                name="frequency"
-                value="daily"
-                className="custom-radio"
-                checked={selectedFrequency === "daily"}
-                onChange={(e)=>handleFrequencyChange(e.target.value)}
-                onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
-              />
-              <label htmlFor="daily">Daily</label>
-            </div>
+          {" "}
+          <div className="radiosec">
+            <input
+              type="radio"
+              id="daily"
+              name="frequency"
+              value="daily"
+              className="custom-radio"
+              checked={selectedFrequency === "daily"}
+              onChange={(e) => handleFrequencyChange(e.target.value)}
+              onClick={() => {
+                navigate("/cast/schedulecasting");
+                hideschedulecasting();
+              }}
+            />
+            <label htmlFor="daily">Daily</label>
+          </div>
           <div className="radiosec">
             <input
               type="radio"
@@ -54,12 +53,14 @@ let {handleFrequencyChange,selectedFrequency}=useContext(DataProvider)
               name="frequency"
               value="weekdays"
               checked={selectedFrequency === "weekdays"}
-              onChange={(e)=>handleFrequencyChange(e.target.value)}
-              onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
+              onChange={(e) => handleFrequencyChange(e.target.value)}
+              onClick={() => {
+                navigate("/cast/schedulecasting");
+                hideschedulecasting();
+              }}
             />
             <label htmlFor="weekdays">Weekdays (Mon-Fri)</label>
           </div>
-
           <div className="radiosec">
             {" "}
             <input
@@ -68,26 +69,30 @@ let {handleFrequencyChange,selectedFrequency}=useContext(DataProvider)
               name="frequency"
               value="weekends"
               checked={selectedFrequency === "weekends"}
-              onChange={(e)=>handleFrequencyChange(e.target.value)}
-              onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
+              onChange={(e) => handleFrequencyChange(e.target.value)}
+              onClick={() => {
+                navigate("/cast/schedulecasting");
+                hideschedulecasting();
+              }}
             />
             <label htmlFor="weekends">Weekends (Sat-Sun)</label>
           </div>
-
-         <div className="radiosec">
+          <div className="radiosec">
             {" "}
-             <input
+            <input
               type="radio"
               id="custom"
               name="frequency"
               value="custom"
               checked={selectedFrequency === "custom"}
-              onChange={(e)=>handleFrequencyChange(e.target.value)} 
-              onClick={()=>{navigate("/cast/schedulecasting");hideschedulecasting()}}
+              onChange={(e) => handleFrequencyChange(e.target.value)}
+              onClick={() => {
+                navigate("/cast/schedulecasting");
+                hideschedulecasting();
+              }}
             />
             <label htmlFor="custom">Custom</label>
           </div>
-         
         </div>
       </div>
     </div>

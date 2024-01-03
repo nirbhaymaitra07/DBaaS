@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useCallback, useEffect, useState } from "react";
 import Boxes from "./images/Boxes.svg";
 import commonarea from "./images/commonarea.svg";
 import cafetaria from "./images/cafetaria.svg";
@@ -12,6 +12,24 @@ const ContextProvider = ({ children }) => {
     NoOfDevices: "",
   });
   const [selectedFrequency, setSelectedFrequency] = useState("");
+  let [final, setFinal] = useState([]);
+
+  function createLayout() {
+    let layouts = Array.from(
+      { length: gridLayoutform.NoOfDevices },
+      (_, i) => ({
+        i: i.toString(),
+        x: (i * 2) % 20,
+        y: Math.floor(i / 6) * 2,
+        w: 4,
+        h: 2,
+        isResizable: true, // Enable resize
+        // castDevice: "",
+      })
+    );
+    setFinal(layouts);
+  }
+
   let data = [
     {
       img: cafetaria1,
@@ -43,6 +61,19 @@ const ContextProvider = ({ children }) => {
       value={{
         CastingLayoutConnfig: data,
         layout: layout,
+        NewLayout: final,
+        createLayout: createLayout,
+        mapCastingDevice: (index, castingScreen) => {
+          setFinal((prev) => {
+            let data = [...prev];
+            data.map((item, i) => {
+              if (index === i && castingScreen) {
+                item.castDevice = castingScreen;
+              }
+            });
+            return data;
+          });
+        },
         selectedFrequency: selectedFrequency,
         gridLayoutform: gridLayoutform,
         selectLayout: (layout) => {
@@ -54,15 +85,18 @@ const ContextProvider = ({ children }) => {
         handleLayoutOnChange: (e) => {
           setGridLayoutform((prevValues) => ({
             ...prevValues,
-            "layoutName": e.target.value,
-          }))
+            layoutName: e.target.value,
+          }));
         },
-        handleNoOfDevicesOnChange: (value) => {
-          setGridLayoutform((prevValues) => ({
-            ...prevValues,
-            "NoOfDevices": value,
-          }))
-        },
+        handleNoOfDevicesOnChange: useCallback(
+          (value) => {
+            setGridLayoutform((prevValues) => ({
+              ...prevValues,
+              NoOfDevices: value,
+            }));
+          },
+          [gridLayoutform.NoOfDevices]
+        ),
       }}
     >
       {children}

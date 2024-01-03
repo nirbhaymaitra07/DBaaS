@@ -19,12 +19,12 @@ import Casting from "./Casting";
 
 const ScheduleCasting = () => {
   const [addTimeSlot, setAddTimeSlot] = useState(false);
-  let [schedulecasting, setschedulecasting] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  let [schedulecasting, setschedulecasting] = useState(false);
   let [ShowCustomCastingSchedule, setShowCustomCastingSchedule] = useState(false);
   let [Week, setWeek] = useState("");
-  let location=useLocation()
-let {selectedFrequency}=useContext(DataProvider)
+  let location = useLocation();
+  let { selectedFrequency } = useContext(DataProvider);
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -46,11 +46,17 @@ let {selectedFrequency}=useContext(DataProvider)
     <div className="main-container">
       <div className="casting-header">
         <div className="back-image">
-          <img src={Back} onClick={!ShowCustomCastingSchedule?() => navigate("/cast/layouts"):()=>setShowCustomCastingSchedule(false)} />
+          <img
+            src={Back}
+            onClick={
+              !ShowCustomCastingSchedule
+                ? () => navigate("/cast/layouts")
+                : () => setShowCustomCastingSchedule(false)
+            }
+          />
         </div>
         <div className="heading">Schedule Casting</div>
       </div>
-
       <div className="date-time-div">
         <div className="date-time-top-subdiv">
           <div className="date-time-topleft-subdiv">
@@ -58,7 +64,6 @@ let {selectedFrequency}=useContext(DataProvider)
             <h5 className="date-heading">1 June</h5>
             <img src={ArrowRight} className="arrow-right" />
           </div>
-
           <div className="date-time-topright-subdiv">
             <img src={DarkCalendar} className="dark-calendar-image" />
             <img src={Line} className="line-calendar-image" />
@@ -70,7 +75,6 @@ let {selectedFrequency}=useContext(DataProvider)
             />
           </div>
         </div>
-
         <div className="date-time-bottom-subdiv">
           <div className="timeline-number">
             <span>02:00</span>
@@ -83,13 +87,24 @@ let {selectedFrequency}=useContext(DataProvider)
           <img src={TimeLine} className="timeline-calendar-image" />
         </div>
       </div>
-
       <div className="casting-body">
         <div className="casting-upper">
-          <p className="daily-para">{!ShowCustomCastingSchedule?selectedFrequency:Week}</p>
-          <p className="change-para" onClick={addTimeSlot?()=>setAddTimeSlot(true):()=>{setschedulecasting(true)}}>Change</p>
+          <p className="daily-para">
+            {!ShowCustomCastingSchedule ? selectedFrequency : Week}
+          </p>
+          <p
+            className="change-para"
+            onClick={
+              addTimeSlot
+                ? () => setAddTimeSlot(true)
+                : () => {
+                    setschedulecasting(true);
+                  }
+            }
+          >
+            Change
+          </p>
         </div>
-
         <div className="date-div">
           <p className="date-heading">Start Date</p>
           <div className="date-subdiv">
@@ -100,7 +115,6 @@ let {selectedFrequency}=useContext(DataProvider)
             />
             <img className="date-input-image" src={CalendarBody} />
           </div>
-
           <p className="date-heading">End Date (Optional)</p>
           <div className="date-subdiv">
             <input
@@ -130,11 +144,9 @@ let {selectedFrequency}=useContext(DataProvider)
                   </option>
                 ))}
               </select>
-              {/* {selectedOption && <p>Selected option: {selectedOption}</p>} Show the selected option */}
             </div>
           </div>
         )}
-
         <div className="time-div">
           <p className="time-heading">Start Time</p>
           <div className="time-subdiv">
@@ -163,7 +175,6 @@ let {selectedFrequency}=useContext(DataProvider)
               <img className="time-subdiv-info-image" src={Frame} alt="frame" />
             </div>
           </div>
-
           <p className="time-heading">End Time (Optional)</p>
           <div className="time-subdiv">
             <div className="time-subdiv-info">
@@ -191,7 +202,6 @@ let {selectedFrequency}=useContext(DataProvider)
               <img className="time-subdiv-info-image" src={Frame} alt="frame" />
             </div>
           </div>
-
           {!ShowCustomCastingSchedule && (
             <div
               className="lower-body-text-div"
@@ -203,11 +213,15 @@ let {selectedFrequency}=useContext(DataProvider)
           )}
         </div>
       </div>
-
       <div className="casting-footer">
         <div className="casting-footer-discard">
           <img className="casting-footer-discard-img" src={Remove} />
-          <button className="discard-btn" onClick={()=>navigate("/cast/layouts")}>DISCARD</button>
+          <button
+            className="discard-btn"
+            onClick={() => navigate("/cast/layouts")}
+          >
+            DISCARD
+          </button>
         </div>
         <button className="schedule-btn">Schedule</button>
       </div>

@@ -21,8 +21,8 @@
 .new-background-container .topsection span {
   font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #2c2c2c;
   font-weight: 500;
+  color: #2c2c2c;
 }
 .new-background-container .topsection .scale-container {
   width: 20.73%;
@@ -37,8 +37,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #838383;
   border-radius: 4px 0px 0px 4px;
+  color: #838383;
 }
 .new-background-container .topsection .scale-container .m {
   width: 50%;
@@ -46,90 +46,87 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #838383;
   border-radius: 0px 4px 4px 0px;
+  color: #838383;
 }
 .new-background-container .topsection .scale-container .active {
-  background: #13027c;
-  color: #fff;
   border: 1px solid #13027c;
+  color: #fff;
+  background: #13027c;
 }
 
-.new-background-container .height{
-    width: 100%;
-    height: 20.95%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5.88%;
+.new-background-container .height {
+  width: 100%;
+  height: 20.95%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5.88%;
 }
-.new-background-container .height label{
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    color: #4A5A70;
-  font-weight: 400;
+.new-background-container .height label {
   margin-bottom: 1%;
-}
-.new-background-container .height input{
-    width: 100%;
-    height: 56.14%;
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    font-weight: 400;
-    color: #2C2C2C;
-    border-radius: 8px;
-    background: rgb(19, 2, 124,0.1);
-    border: none;
-    outline: none;
-    padding-left: 4.87%;
-
-
-}
-.new-background-container .width{
-    width: 100%;
-    height: 20.95%;
-    display: flex;
-    flex-direction: column;
-}
-.new-background-container .width label{
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    color: #4A5A70;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  color: #4a5a70;
   font-weight: 400;
+}
+.new-background-container .height input {
+  width: 100%;
+  height: 56.14%;
+  padding-left: 4.87%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  font-weight: 400;
+  color: #2c2c2c;
+  background: rgb(19, 2, 124, 0.1);
+}
+.new-background-container .width {
+  width: 100%;
+  height: 20.95%;
+  display: flex;
+  flex-direction: column;
+}
+.new-background-container .width label {
   margin-bottom: 1%;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  font-weight: 400;
+  color: #4a5a70;
 }
-.new-background-container .width input{
-    width: 100%;
-    height: 56.14%;
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    font-weight: 400;
-    color: #2C2C2C;
-    border-radius: 8px;
-    background: rgb(19, 2, 124,0.1);
-    border: none;
-    outline: none;
-    padding-left: 4.87%;
+.new-background-container .width input {
+  width: 100%;
+  height: 56.14%;
+  padding-left: 4.87%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  font-weight: 400;
+  color: #2c2c2c;
+  background: rgb(19, 2, 124, 0.1);
 }
-
-.new-background-container .new-background-actions{
-    width: 100%;
-    height: 24.86%;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
- }
- .new-background-container .new-background-actions button{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    background: #FFF;
-    border-radius: 0px;
- }
- .new-background-container .new-background-actions .cancel{
-     color: #838383;
- }
- .new-background-container .new-background-actions .save{
-     color: #13027C;
- }
+.new-background-container .new-background-actions {
+  width: 100%;
+  height: 24.86%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.new-background-container .new-background-actions button {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  background: #fff;
+  border-radius: 0px;
+}
+.new-background-container .new-background-actions .cancel {
+  color: #838383;
+}
+.new-background-container .new-background-actions .save {
+  color: #13027c;
+}

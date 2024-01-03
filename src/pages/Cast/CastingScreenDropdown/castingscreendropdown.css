@@ -1,0 +1,9 @@
+.castingscreen-dropdown {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transition: height 0.5s ease;
+}
+.castingscreen-dropdown::-webkit-scrollbar {
+  display: none;
+}

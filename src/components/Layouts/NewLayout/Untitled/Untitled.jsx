@@ -32,7 +32,7 @@ import { DataProvider } from "../../../../Context/ContextProvider";
 import OnlyGrid from "../../../Grid/OnlyGrid";
 const Untitled = () => {
   let location = useLocation();
-  let { layout, gridLayoutform } = useContext(DataProvider);
+  let { layout, gridLayoutform, mapCastingDevice } = useContext(DataProvider);
   let navigate = useNavigate();
 
   setTimeout(() => {
@@ -43,6 +43,7 @@ const Untitled = () => {
       navigate("/layouts");
     }
   }, 0);
+
   let rotatebar = useRef(null);
   let [showcastingdevices, setshowcastingdevices] = useState(false);
   let [showwifidevices, setshowwifidevices] = useState(false);
@@ -56,7 +57,7 @@ const Untitled = () => {
   let [rotatemode, setRotateMode] = useState(false);
   let [fullrotatemode, setfullrotatemode] = useState(false);
   let [schedulecasting, setschedulecasting] = useState(false);
-
+  let [selectedCastingArea, setselectedCastingArea] = useState(null);
   function selectWifiNetwork(wifi) {
     setshowwifidevices(false);
     setwifinetwork(wifi);
@@ -65,15 +66,26 @@ const Untitled = () => {
     setshowwifidevices(true);
     setshowcastingdevices(false);
   }
-  function showCastingdevices() {
+
+  function showCastingdevices(selectedArea) {
     if (wifinetwork) {
       setshowcastingdevices(true);
+      setselectedCastingArea(selectedArea);
     }
   }
   function selectCastingDevice(castingdevice) {
+    console.log(castingdevice);
     setcastingScreen(castingdevice);
     setshowcastingdevices(false);
   }
+  useEffect(() => {
+    console.log(castingScreen, selectedCastingArea);
+    if (selectedCastingArea !== "undefined" && castingScreen !== "") {
+      mapCastingDevice(selectedCastingArea, castingScreen);
+      console.log("inside");
+      setcastingScreen("");
+    }
+  }, [castingScreen, selectedCastingArea]);
 
   function showNewDisplayPop() {
     setshowNewDisplay(true);
@@ -152,7 +164,9 @@ const Untitled = () => {
             alt=""
             onClick={
               location.pathname === "/layouts/untitled"
-                ? rotatemode? () => setRotateMode(false):() => navigate("/layouts")
+                ? rotatemode
+                  ? () => setRotateMode(false)
+                  : () => navigate("/layouts")
                 : () => navigate("/cast/layouts")
             }
           />
@@ -218,17 +232,17 @@ const Untitled = () => {
             </>
           )}
         </div>
-        <div className="layout-container" style={{ transform: `rotate(${rotatedegree}deg)`,background:"red" }} >
+        <div
+          className="layout-container"
+          style={{ transform: `rotate(${rotatedegree}deg)` }}
+        >
           {location.pathname === "/cast/configuration" ? (
             <img src={layout.img} alt="" />
           ) : (
-            // <img
-            //   src={layout?layout:layout1}
-            //   alt=""
-            //   onClick={showCastingdevices}
-            //   style={{ transform: `rotate(${rotatedegree}deg)` }}
-            // />
-            <OnlyGrid   showCastingdevices={showCastingdevices}/>
+            <OnlyGrid
+              showCastingdevices={showCastingdevices}
+              castingScreen={castingScreen}
+            />
           )}
         </div>
         <div className="angle-container">

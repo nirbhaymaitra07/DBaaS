@@ -29,14 +29,13 @@
 .untitled-container .top-section .top-icons .right > img {
   height: 100%;
 }
-
 .untitled-container .top-section h4 {
   position: absolute;
   left: 4.44%;
   bottom: 14.95%;
-  color: #2c2c2c;
   font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
   font-weight: 400;
+  color: #2c2c2c;
 }
 .untitled-container .bottom-section {
   width: 100%;
@@ -57,19 +56,15 @@
   display: flex;
   align-items: center;
   margin-top: 2%;
-  
 }
-.untitled-container .bottom-section .top .rotateall-container span{
+.untitled-container .bottom-section .top .rotateall-container span {
   font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-  color: #555;
   font-weight: 400;
-  
+  color: #555;
 }
-.untitled-container .bottom-section .top .rotateall-container img{
+.untitled-container .bottom-section .top .rotateall-container img {
   width: 5%;
   margin-right: 2%;
-  
-  
 }
 .untitled-container .bottom-section .top .left {
   width: 20%;
@@ -78,7 +73,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .untitled-container .bottom-section .top .left img {
   height: 100%;
 }
@@ -89,15 +83,10 @@
   width: 100%;
   height: 73%;
   margin-top: 15%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease; */
 }
 .untitled-container .bottom-section .layout-container img {
   width: 100%;
 }
-
 .untitled-container .bottom-section .angle-container {
   width: 100%;
   max-height: 15%;
@@ -105,7 +94,6 @@
   bottom: 0;
   left: 0;
   margin-bottom: 1.5%;
-  
 }
 .untitled-container .bottom-section .angle-container .rotate-bar {
   width: 100%;
@@ -114,46 +102,78 @@
   align-items: center;
   overflow-x: scroll;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container {
   width: 100%;
   height: 20%;
   display: flex;
   align-items: center;
-  padding: 0% 4.44%;
   margin-top: 5%;
+  padding: 0% 4.44%;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .castingname{
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .castingname {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .right-section{
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .right-section {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .right-section span{
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .right-section
+  span {
   font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
   color: #555;
   font-weight: 400;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .right-section .angle-icon{
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .right-section
+  .angle-icon {
   width: 20%;
- height: 100%;
- display: flex;
- align-items: center;
- justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .right-section .angle-icon img{
- width: 65%;
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .right-section
+  .angle-icon
+  img {
+  width: 65%;
 }
-.untitled-container .bottom-section .angle-container .singlecastingrotateangle-container .castingname span{
+.untitled-container
+  .bottom-section
+  .angle-container
+  .singlecastingrotateangle-container
+  .castingname
+  span {
   font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-  color: #555;
   font-weight: 400;
+  color: #555;
 }
 .untitled-container .bottom-section .angle-container .rotateallcontainer {
   width: 100%;
@@ -172,21 +192,45 @@
   justify-content: space-between;
   margin-left: 4%;
 }
-.untitled-container .bottom-section .angle-container .rotateallcontainer .left .cancel {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .rotateallcontainer
+  .left
+  .cancel {
   width: 25%;
 }
-.untitled-container .bottom-section .angle-container .rotateallcontainer .left .rotate {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .rotateallcontainer
+  .left
+  .rotate {
   width: 20%;
 }
-.untitled-container .bottom-section .angle-container .rotateallcontainer .right span {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .rotateallcontainer
+  .right
+  span {
   font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-  color: #555;
   font-weight: 400;
+  color: #555;
 }
-.untitled-container .bottom-section .angle-container .rotateallcontainer .right img {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .rotateallcontainer
+  .right
+  img {
   width: 14%;
 }
-.untitled-container .bottom-section .angle-container .rotateallcontainer .right {
+.untitled-container
+  .bottom-section
+  .angle-container
+  .rotateallcontainer
+  .right {
   width: 35%;
   height: 100%;
   display: flex;
@@ -239,14 +283,14 @@
   font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
   color: #555;
 }
-.untitled-container .casting-section{
+.untitled-container .casting-section {
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
   background: rgb(44, 44, 44, 0.7);
+  z-index: 2;
 }
 .untitled-container .castingdevice-container {
   width: 100%;
@@ -257,8 +301,8 @@
   padding-top: 4.7%;
   padding-left: 4.44%;
   padding-right: 4.44%;
-  background-color: #fff;
   border-radius: 16px 16px 0px 0px;
+  background-color: #fff;
   box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 1;
   transition: 0.3s ease-in;
@@ -276,7 +320,9 @@
   height: 90%;
   overflow-y: auto;
 }
-.untitled-container .castingdevice-container .casting-container-bottom::-webkit-scrollbar{
+.untitled-container
+  .castingdevice-container
+  .casting-container-bottom::-webkit-scrollbar {
   display: none;
 }
 .untitled-container .castingdevice-container .top-wifi-name img {
@@ -289,13 +335,13 @@
   color: #838383;
 }
 
-.untitled-container .wifi-container{
-  position: absolute;
+.untitled-container .wifi-container {
   width: 100%;
   height: 100%;
-  z-index: 2;
+  position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 2;
   background: rgb(44, 44, 44, 0.7);
 }
 .untitled-container .wifi-devices-conatiner {
@@ -310,10 +356,10 @@
   background: #fff;
   box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   transition: 0.3s ease-in;
 }
-.untitled-container .wifi-devices-conatiner .top-wifi-title{
+.untitled-container .wifi-devices-conatiner .top-wifi-title {
   height: 10%;
 }
 .untitled-container .wifi-devices-conatiner .top-wifi-title span {
@@ -327,36 +373,38 @@
   height: 90%;
   overflow-y: auto;
 }
-.untitled-container .wifi-devices-conatiner .wifi-devices-conatiner-bottom::-webkit-scrollbar{
+.untitled-container
+  .wifi-devices-conatiner
+  .wifi-devices-conatiner-bottom::-webkit-scrollbar {
   display: none;
 }
-.untitled-container .addnewdisplay-container{
+.untitled-container .addnewdisplay-container {
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgb(44, 44, 44,0.7);
+  background: rgb(44, 44, 44, 0.7);
   z-index: 2;
   transition: 0.3s ease-in;
 }
-.untitled-container .new-display-container{
+.untitled-container .new-display-container {
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgb(44, 44, 44,0.7);
+  background: rgb(44, 44, 44, 0.7);
   z-index: 2;
   transition: 0.3s ease-in;
 }
-.untitled-container .newbackground{
+.untitled-container .newbackground {
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgb(44, 44, 44,0.7);
+  background: rgb(44, 44, 44, 0.7);
   z-index: 2;
   transition: 0.3s ease-in;
 }

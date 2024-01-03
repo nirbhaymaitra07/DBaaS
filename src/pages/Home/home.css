@@ -11,6 +11,7 @@
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
+
 .home-container .top-title h4 {
   position: absolute;
   top: 59.81%;
@@ -19,12 +20,14 @@
   font-weight: 400;
   color: #2c2c2c;
 }
+
 .home-container .bottom-container {
   width: auto;
   height: 76.5%;
   padding: 0 4.4%;
   overflow-y: auto;
 }
+
 .home-container .bottom-container .live-container {
   width: 100%;
   margin-top: 2.62%;
@@ -37,34 +40,40 @@
   align-items: center;
   margin-bottom: 4%;
 }
+
 .home-container .bottom-container .live-container .live-top img {
   width: 1.66%;
   height: 0.75%;
   margin-right: 2.22%;
 }
+
 .home-container .bottom-container .live-container .live-top h4 {
   height: 2.62%;
   font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
   font-weight: 400;
   color: #ff0000;
 }
+
 .home-container .bottom-container .scheduled-cast {
-  margin-bottom:6.25% ;
+  margin-bottom: 6.25%;
 }
 
-.scheduled-cast .scheduled-top{
-    margin-bottom: 4%;
+.scheduled-cast .scheduled-top {
+  margin-bottom: 4%;
 }
-.scheduled-cast .scheduled-top h4{
-    font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-    color: #4A5A70;
-    margin-bottom: 4%;
+
+.scheduled-cast .scheduled-top h4 {
+  margin-bottom: 4%;
+  font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
+  color: #4a5a70;
 }
-.expire-cast .expire-top{
-margin-bottom: 4%;
+
+.expire-cast .expire-top {
+  margin-bottom: 4%;
 }
-.expire-cast .expire-top h4{
-    font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-    color: #4A5A70;
-    margin-bottom: 4%;
+
+.expire-cast .expire-top h4 {
+  margin-bottom: 4%;
+  font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
+  color: #4a5a70;
 }

@@ -1,12 +1,12 @@
 .casting-container {
   width: 100%;
   height: 100% !important;
-  background-color: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 5;
   padding: 0px !important;
+  background-color: #fff;
+  z-index: 5;
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -26,9 +26,9 @@
   color: #2c2c2c;
 }
 .leftarrow {
-  position: absolute;
-  height: 20%;
   width: 5.59%;
+  height: 20%;
+  position: absolute;
   margin-top: 4%;
   margin-left: 4%;
 }
@@ -39,47 +39,38 @@
   overflow-y: auto;
 }
 .btn-section {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 60%;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  /* top: 15%; */
-}
-.btn-section > div {
- 
 }
 .btn-section label {
   margin-left: 3%;
-  color: #4a5a70;
   font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-  /* font-size: 14px; */
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #4a5a70;
 }
 input[type="radio"] {
-  /* remove standard background appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* create custom radiobutton appearance */
-  display: inline-block;
   width: 15px;
   height: 15px;
+  display: inline-block;
   padding: 2px;
-  /* background-color only for content */
-  background-clip: content-box;
   border: 1px solid #4a5a70;
-  /* background-color: #e7e6e7; */
   border-radius: 50%;
+  appearance: none;
+  background-clip: content-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 input[type="radio"]:checked {
-  background-color: #13027c;
   border: 1px solid #13027c;
+  background-color: #13027c;
 }
 .radiosec {
+  height: 12% !important;
   display: flex;
   align-items: center;
-  height: 12% !important;
 }
