@@ -1,138 +1,131 @@
-.Cast_Environment_parent{
-    width: 100%;
-    height: 100%;
-    position: relative;
+.Cast_Environment_parent {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.Cast_Environment_parent_Header{
-    height: 13.37%;
-    width: 100%;
-    /* border: 2px solid; */
-    box-shadow: 0px 4px 4px 0px #00000040;
-    position: relative;
+.Cast_Environment_parent_Header {
+  width: 100%;
+  height: 13.37%;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
-.Cast_Environment_parent_Header_contnet{
-    position: absolute;
-    width: 54.44%;
-    height: 25.23%;
-    top: 59.81%;
-    left: 4.44%;
-    font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
-    font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0em;
-    color: #2C2C2C;
+.Cast_Environment_parent_Header_contnet {
+  width: 54.44%;
+  height: 25.23%;
+  position: absolute;
+  top: 59.81%;
+  left: 4.44%;
+  font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  color: #2c2c2c;
 }
-.repeated_size{
-    width: 5.55%;
-    height: 18.69%;
-    top: 12.55%;
-    position:absolute;
-}
-
-#arrowleft{
-     left: 4.44%;
-}
-#AddBtn{
-     left: 65.55%;
-}
-#Coding{
-     left: 77.74%;
-}
-#NotesClock{
-     left: 89.96%;
+.repeated_size {
+  width: 5.55%;
+  height: 18.69%;
+  position: absolute;
+  top: 12.55%;
 }
 
-.Cast_Environment_parent_Rotation_Area{
-    height: 73.62%;
-    width: 100%;
-    /* border: 1px solid; */
-    position: relative;
+#arrowleft {
+  left: 4.44%;
+}
+#AddBtn {
+  left: 65.55%;
+}
+#Coding {
+  left: 77.74%;
+}
+#NotesClock {
+  left: 89.96%;
 }
 
-.Cast_Environment_parent_Rotation_Sub_heading{
-    width: 6.6%;
-    top: 2.71%;
-    position:absolute;
+.Cast_Environment_parent_Rotation_Area {
+  width: 100%;
+  height: 73.62%;
+  position: relative;
 }
 
-#Rotate{
-    left: 4.44%;
+.Cast_Environment_parent_Rotation_Sub_heading {
+  width: 6.6%;
+  position: absolute;
+  top: 2.71%;
 }
 
-#RotateHorizontal{
-    left: 17.77%;
+#Rotate {
+  left: 4.44%;
 }
 
-#View{
-    left: 88.88%;
+#RotateHorizontal {
+  left: 17.77%;
 }
 
-.Cast_Environment_parent_Rotation_Area_Img{
-    width: 81.11%;
-    height: 15.95%;
-    position:absolute;
-    top:44.125%;
-    left: 9.4%;
+#View {
+  left: 88.88%;
 }
 
-.Cast_Rotation_img{
-    width: 100%;
-    height: 3%;
-    position: relative;
-}
-.RotationGraph{
-    position: absolute;
-    left: 1.11%;
+.Cast_Environment_parent_Rotation_Area_Img {
+  width: 81.11%;
+  height: 15.95%;
+  position: absolute;
+  top: 44.125%;
+  left: 9.4%;
 }
 
-.Discard_CastNow_Btn{
-    position:absolute;
-    display: flex;
-    top:91%;
-    height: 10%;
-    width: 100%;
-    /* border: 1px solid; */
-    border-top: 1px solid #838383
+.Cast_Rotation_img {
+  width: 100%;
+  height: 3%;
+  position: relative;
 }
 
-.Discard_CastNow_Btn div{
-    width: 50%;
-    height: 100%;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8%;
+.RotationGraph {
+  position: absolute;
+  left: 1.11%;
 }
 
-.Discard_CastNow_Btn div img{
-    width: 8.88%;
+.Discard_CastNow_Btn {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  position: absolute;
+  top: 91%;
+  border-top: 1px solid #838383;
 }
 
-.Discard{
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-color: #555555;
-
+.Discard_CastNow_Btn div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+  border: 1px solid;
 }
 
-.CastNow{
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem); 
-    color: #FFFFFF;
- 
+.Discard_CastNow_Btn div img {
+  width: 8.88%;
 }
 
-/* Add styles for the zoomed image */
+.Discard {
+  font-weight: 400;
+  line-height: 24px;
+  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+  letter-spacing: 0em;
+  color: #555555;
+}
+
+.CastNow {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+  color: #ffffff;
+}
+
 #zoomed {
-    transform: scale(1.5); /* Increase the size of the image */
-    transition: transform 0.3s ease; /* Add a smooth transition */
-    cursor: pointer; /* Show pointer cursor on hover */
-  }
-  
-
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}

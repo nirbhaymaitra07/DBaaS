@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-// import Home from "./images/Home.jsx/index.js"
 import Cast from "./images/CastSVG.jsx";
-// import profile from "./images/Profile.jsx/index.js"
 import Layout from "./images/LayoutSVG";
 import Home from "./images/HomeSVG.jsx";
 import Profile from "./images/ProfileSVG.jsx";
@@ -14,6 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     setActiveTabs(location.pathname);
   }, [location.pathname]);
+
   return (
     <div className="navbar-container">
       <Link to="/" style={{ textDecoration: "none", display: "contents" }}>

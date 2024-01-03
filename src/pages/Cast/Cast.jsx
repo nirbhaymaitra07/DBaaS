@@ -37,7 +37,6 @@ const Cast = () => {
       HotSpot: PersonalHotspot, // Assuming PersonalHotspot is a variable
     },
   ];
-  // console.log(DataConfiguration);
   return (
     <>
       {location.pathname === "/cast" ? (

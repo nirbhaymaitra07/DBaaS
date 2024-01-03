@@ -1,66 +1,95 @@
-.Apps_Parent{
-    width: 100%;
-    height: 100%;
-    position: relative;
+.Apps_Parent {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.Apps_Close_Btn{
-    position: absolute;
-    width: 4.444%;
-    top:4.25% ;
-    left:4.444% ;
+.Apps_Parent .topheader {
+  width: 100%;
+  height: 8%;
+  position: relative;
 }
 
-.Apps_Header_Content{
-    position: absolute;
-    width: 10%;
-    top:4% ;
-    left:13.88% ;
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+.Apps_Close_Btn {
+  width: 4.444%;
+  position: absolute;
+  top: 55.25%;
+  left: 4.444%;
 }
 
-.Apps_Screens_Header1{
-    position:absolute;
-    width:88.77% ;
-    height: 6.25%;
-    top:7.5% ;
-    border-radius: 1.13%;
-    /* border: 2px solid; */
-    padding: 0px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.Apps_Screens_Header2{
-    position:absolute;
-    width:88.77% ;
-    height: 6.25%;
-    top:13.75% ;
-    border-radius: 1.13%;
-    /* border: 2px solid; */
-    padding: 0px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.Apps_Screens_Header3{
-    position:absolute;
-    width:88.77% ;
-    height: 6.25%;
-    top:22% ;
-    border-radius: 1.13%;
-    /* border: 2px solid; */
-    padding: 0px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.Apps_Header_Content {
+  width: 10%;
+  position: absolute;
+  top: 51%;
+  left: 13.88%;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  color: #4a5a70;
 }
 
-.Apps_Screens_Header_Content{
-    font-size: clamp(0.28375rem, -0.0003rem + 4.5455vw, 28.40875rem);
-    /* font-family: Poppins; */
-    /* font-size: 16px; */
-    font-weight: 400;
-    line-height: 24px;
-    color: #2C2C2C;
+.Apps_Screens_Header1 {
+  width: 100%;
+  height: 6.25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 7%;
+  border-radius: 1.13%;
+  box-sizing: border-box;
+}
+
+.ArrowDown_btn {
+  transition: all 0.5s ease;
+}
+
+.Apps_Screens_Header2 {
+  width: 100%;
+  height: 6.25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 7%;
+  border-radius: 1.13%;
+  box-sizing: border-box;
+}
+
+.Apps_Screens_Header3 {
+  width: 100%;
+  height: 6.25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 7%;
+  border-radius: 1.13%;
+  box-sizing: border-box;
+}
+
+.Dropdown-1 {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.Dropdown-2 {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.Dropdown-3 {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.Apps_Screens_Header_Content {
+  font-size: clamp(0.28375rem, -0.0003rem + 4.5455vw, 28.40875rem);
+  font-weight: 400;
+  line-height: 24px;
+  color: #2c2c2c;
 }

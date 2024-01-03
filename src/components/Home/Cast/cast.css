@@ -1,36 +1,35 @@
-.cast-container{
-    width: 100%;
-    height: 11.87%;
-    padding-top: 2%;
-    padding-left: 4.44%;
-    padding-bottom:2% ;
-    border-radius: 16px;
-    margin-bottom: 4%;
+.cast-container {
+  width: 100%;
+  height: 11.87%;
+  margin-bottom: 4%;
+  padding-top: 2%;
+  padding-left: 4.44%;
+  padding-bottom: 2%;
+  border-radius: 16px;
 }
-.cast-container .time{
-    color: #4A5A70;
-    font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-    font-weight: 500;
-    margin-bottom: 1%;
+.cast-container .time {
+  color: #4a5a70;
+  font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
+  font-weight: 500;
+  margin-bottom: 1%;
 }
-.cast-container .cast-name{
-    color: #4A5A70;
-    font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
-    font-weight: 400;
+.cast-container .cast-name {
+  color: #4a5a70;
+  font-size: clamp(0.2425rem, -0.0006rem + 3.8889vw, 24.305rem);
+  font-weight: 400;
 }
-.cast-container .author{
-    color: #4A5A70;
-    font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-    font-weight: 400;
-
+.cast-container .author {
+  color: #4a5a70;
+  font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
+  font-weight: 400;
 }
-.Cast_App_Configuration .newconfig_pop{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgb(44, 44, 44,0.7);
-    z-index: 4;
-    transition: all 0.3s ease;
+.Cast_App_Configuration .newconfig_pop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(44, 44, 44, 0.7);
+  z-index: 4;
+  transition: all 0.3s ease;
 }

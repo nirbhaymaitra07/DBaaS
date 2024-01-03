@@ -18,15 +18,14 @@ const Newlayout = React.memo(() => {
   const [mBackgroundColor, setMBackgroundColor] = useState("#DFDFDF");
   const [ftTextColor, setFtTextColor] = useState("#FFFFFF");
   const [mTextColor, setMTextColor] = useState("#4A5A70");
-
-  let { handleLayoutOnChange, gridLayoutform,handleNoOfDevicesOnChange } = useContext(DataProvider);
-  console.log(gridLayoutform);
+  let { handleLayoutOnChange, gridLayoutform, handleNoOfDevicesOnChange } =
+    useContext(DataProvider);
   const toggleColors = (clicked) => {
     if (clicked === "ft") {
       setFtBackgroundColor("#13027C");
       setMBackgroundColor("#DFDFDF");
       setFtTextColor("#FFFFFF");
-      setMTextColor("#4A5A70"); 
+      setMTextColor("#4A5A70");
     } else if (clicked === "m") {
       setFtBackgroundColor("#DFDFDF");
       setMBackgroundColor("#13027C");
@@ -55,13 +54,13 @@ const Newlayout = React.memo(() => {
   };
   const increasedevCount = (e) => {
     setdevCount(parseInt(devCount) + 1);
-    handleNoOfDevicesOnChange(parseInt(devCount) + 1)
+    handleNoOfDevicesOnChange(parseInt(devCount) + 1);
   };
 
   const decreasedevCount = () => {
     if (devCount > 0) {
       setdevCount(parseInt(devCount) - 1);
-      handleNoOfDevicesOnChange(parseInt(devCount) - 1)
+      handleNoOfDevicesOnChange(parseInt(devCount) - 1);
     }
   };
 
@@ -78,9 +77,6 @@ const Newlayout = React.memo(() => {
         </div>
         <h2>New Layout</h2>
       </div>
-      {/* layout */}
-      {/* middle section */}
-
       <div className="bottom-container">
         <div className="nameContainer">
           <p className="nameL">Layout Name</p>
@@ -112,7 +108,6 @@ const Newlayout = React.memo(() => {
             </div>
           </div>
         </div>
-
         <div className="htContainer">
           <p className="ht">height</p>
           <div>
@@ -126,7 +121,7 @@ const Newlayout = React.memo(() => {
               src={arrowup}
               alt="up"
               className="up"
-              onClick={()=>increaseHeightCount(e)}
+              onClick={() => increaseHeightCount(e)}
             />
             <img
               src={arrowdown}
@@ -136,10 +131,8 @@ const Newlayout = React.memo(() => {
             />
           </div>
         </div>
-
         <div className="widthContainer">
           <p className="ht">Width</p>
-          {/* <div> */}
           <input
             className="inpt"
             type="number"
@@ -158,7 +151,6 @@ const Newlayout = React.memo(() => {
             className="down"
             onClick={decreaseWidthCount}
           />
-          {/* </div> */}
         </div>
         <div className="devices">
           <div className="devContainer">
@@ -172,7 +164,7 @@ const Newlayout = React.memo(() => {
                 type="number"
                 placeholder="0"
                 name="NoOfDevices"
-                onChange={(e) =>handleNoOfDevicesOnChange(devCount)}
+                onChange={(e) => handleNoOfDevicesOnChange(devCount)}
                 value={devCount}
               />
               <img
@@ -193,12 +185,7 @@ const Newlayout = React.memo(() => {
         <div className="sizeContainer">
           <p className="ht">Size</p>
           <div>
-            <input
-              className="inpt"
-              type="number"
-              placeholder="55 Inches"
-              // value={widthCount}
-            />
+            <input className="inpt" type="number" placeholder="55 Inches" />
             <img
               src={arrowup}
               alt="up1"
@@ -231,9 +218,6 @@ const Newlayout = React.memo(() => {
           <div className="moreDev">Add more devices</div>
         </div>
       </div>
-
-      {/* footer section */}
-      {/* this is a comment */}
       <div id="footer">
         <Footer />
       </div>

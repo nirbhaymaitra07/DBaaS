@@ -6,11 +6,11 @@
   width: 100%;
   height: 13.37%;
   position: relative;
+  margin-bottom: 4%;
   padding: 0% 5%;
   padding-top: 5.69%;
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 4%;
 }
 .chooselayout-container .top-section .top-icons {
   width: 100%;
@@ -26,9 +26,9 @@
   position: absolute;
   left: 4.44%;
   bottom: 14.95%;
-  color: #2c2c2c;
   font-size: clamp(0.3125rem, 0rem + 5vw, 31.25rem);
   font-weight: 400;
+  color: #2c2c2c;
 }
 .chooselayout-container .layouts-container {
   width: 100%;

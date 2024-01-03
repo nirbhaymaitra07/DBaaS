@@ -1,6 +1,6 @@
 .main-container {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .casting-header {
@@ -9,38 +9,38 @@
 }
 
 .back-image {
-  color: black;
   position: absolute;
   top: 18.67%;
   left: 4.44%;
+  color: black;
 }
 
 .heading {
-  color: black;
   position: absolute;
   top: 60%;
   left: 4.44%;
+  color: black;
 }
 
 .date-time-div {
   height: 12.62%;
-  background-color: rgb(19, 2, 124, 0.05);
   padding-right: 4.44%;
   padding-left: 4.44%;
+  background-color: rgb(19, 2, 124, 0.05);
 }
 
 .date-time-top-subdiv {
+  width: 100%;
+  height: 50%;
   display: flex;
   justify-content: space-between;
-  height: 50%;
-  width: 100%;
 }
 
 .date-time-topleft-subdiv {
+  width: 40%;
+  height: 80%;
   display: flex;
   justify-content: space-between;
-  height: 80%;
-  width: 40%;
   align-items: center;
 }
 
@@ -53,17 +53,17 @@
 }
 
 .date-heading {
+  margin-bottom: 0.78%;
   font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
   font-weight: 500;
   color: #4a5a70;
-  margin-bottom: 0.78%;
 }
 
 .date-time-topright-subdiv {
+  width: 40%;
+  height: 80%;
   display: flex;
   justify-content: space-evenly;
-  height: 80%;
-  width: 40%;
   align-items: center;
 }
 
@@ -72,50 +72,50 @@
 }
 
 .date-time-bottom-subdiv {
-  height: 50%;
   width: 100%;
+  height: 50%;
 }
 
 .timeline-number {
-  display: flex;
-  justify-content: space-around;
   width: 100%;
   height: 40%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .timeline-calendar-image {
   width: 100%;
 }
 span {
-  color: #4a5a70;
   font-size: clamp(0.13875rem, -0.0001rem + 2.2222vw, 13.88875rem);
+  color: #4a5a70;
 }
 
 .casting-body {
-  height: 64%;
   width: 100%;
+  height: 64%;
   padding: 0 4.57%;
-  box-sizing: border-box;
   padding-top: 5.07%;
+  box-sizing: border-box;
 }
 
 .daily-para {
   font-size: clamp(0.208125rem, -0.0353rem + 3.8944vw, 24.305rem);
-  color: #4a5a70;
   font-weight: 500;
+  color: #4a5a70;
 }
 
 .change-para {
   font-size: clamp(0.208125rem, -0.0002rem + 3.3333vw, 20.833125rem);
-  color: #13027c;
   font-weight: 400;
+  color: #13027c;
 }
 
 .casting-upper {
+  width: 100%;
+  height: 10%;
   display: flex;
   justify-content: space-between;
-  height: 10%;
-  width: 100%;
 }
 
 .date-div {
@@ -136,15 +136,14 @@ span {
 }
 
 .date-input {
-  background-color: rgb(19, 2, 124, 0.05);
   width: 100%;
   height: 80%;
-  border-style: none;
   position: absolute;
-  justify-content: space-between;
-  border-radius: 10px;
-  padding-left: 2%;
   margin-bottom: 4%;
+  padding-left: 2%;
+  border-style: none;
+  border-radius: 10px;
+  background-color: rgb(19, 2, 124, 0.05);
 }
 
 .date-input-image {
@@ -166,38 +165,38 @@ span {
 }
 
 .time-heading {
+  margin-bottom: 0.5%;
+  margin-top: 2%;
   font-size: clamp(0.208125rem, -0.0353rem + 3.8944vw, 24.305rem);
   font-weight: 400;
   color: #2c2c2c;
-  margin-bottom: 0.5%;
-  margin-top: 2%;
 }
 
 .time-subdiv {
-  display: flex;
-  height: 20%;
   width: 100%;
-  margin-bottom: 2%;
+  height: 20%;
+  display: flex;
   margin-top: 0.78%;
+  margin-bottom: 2%;
 }
 
 .time-subdiv-info {
   width: 25%;
   height: 100%;
-  position: relative;
   display: flex;
+  position: relative;
   margin-right: 4.44%;
 }
 
 .time-subdiv-info-input {
   width: 90%;
   height: 100%;
-  background-color: rgb(19, 2, 124, 0.05);
-  border-radius: 5px;
-  position: absolute;
   display: flex;
-  border-style: none;
+  position: absolute;
   padding-left: 10%;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(19, 2, 124, 0.05);
 }
 
 .time-subdiv-info-image {
@@ -207,14 +206,14 @@ span {
 }
 
 .time-input {
-  background-color: rgb(19, 2, 124, 0.05);
   width: 21.94%;
   height: 100%;
-  border-style: none;
   margin-right: 4.44%;
+  margin-bottom: 4%;
   padding-left: 4.44%;
   border-radius: 5px;
-  margin-bottom: 4%;
+  border-style: none;
+  background-color: rgb(19, 2, 124, 0.05);
 }
 
 .lower-body-text-div {
@@ -225,9 +224,9 @@ span {
 }
 
 .lower-body-text {
-  color: #13027c;
   padding: 2%;
   font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
+  color: #13027c;
 }
 
 .lower-body-img {
@@ -235,8 +234,8 @@ span {
 }
 
 .casting-footer {
-  height: 10%;
   width: 100%;
+  height: 10%;
   display: flex;
 }
 
@@ -256,50 +255,49 @@ span {
 
 .discard-btn {
   height: 100%;
-  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
-  background-color: #fff;
-  color: #555;
-  border-radius: 0%;
-  outline: none !important;
-  border: none;
   margin: 0px;
   padding: 3%;
+  border-radius: 0%;
+  border: none;
+  outline: none !important;
+  font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
   font-weight: 400;
+  background-color: #fff;
+  color: #555;
 }
 
 .schedule-btn {
   width: 50%;
   border-radius: 0%;
-  background-color: #13027c;
-  font-weight: 400;
   font-size: clamp(0.2775rem, -0.0003rem + 4.4444vw, 27.7775rem);
+  font-weight: 400;
+  background-color: #13027c;
 }
 
 .wrap-up-background-image {
   height: 100%;
   width: 100%;
   position: absolute;
-  z-index: 2;
   left: 0%;
   bottom: 0%;
+  z-index: 2;
   background: rgb(44, 44, 44, 0.7);
 }
 
 .time-slot-popup {
-  height: 26.87%;
   width: 100%;
+  height: 26.87%;
   position: absolute;
   left: 0%;
   bottom: 0%;
-  z-index: 2;
-  background-color: #13027c;
   padding-left: 8.88%;
+  padding-top: 8%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   box-sizing: border-box;
-  padding-top: 8%;
   background-color: #fff;
   transition: 0.3 ease-in;
+  z-index: 2;
 }
 .time-slot-popup-options {
   height: 53px;
@@ -317,16 +315,15 @@ span {
 }
 
 .day {
-  color: #2c2c2c;
+  margin-top: -1%;
   font-family: Poppins;
   font-size: clamp(0.2775rem, -0.0003rem + 4.4445vw, 27.77775rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: -1%;
+  color: #2c2c2c;
 }
 .custom-dropdown option {
-  color: #555555;
   color: #555;
 }
 .custom-dropdown option:checked {
